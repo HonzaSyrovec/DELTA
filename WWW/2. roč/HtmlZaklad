@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvalitka</title>
+</head>
+<body>
+    <h1>Nadpis 1. úrovně</h1>
+    
+    <h66>Nadpis úrovně 6, nejnižší možný</h66>
+    <br>
+    
+    <img src="" alt="Tady má být obrázek, ale máš smůlu">
+</body>
+</html>

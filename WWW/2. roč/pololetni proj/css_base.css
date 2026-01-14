@@ -1,0 +1,25 @@
+main{
+    margin:0 auto;
+    padding:0;
+}
+.header{
+
+    background-color: red;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: auto;
+    display:flex;
+    
+}
+.header h3{
+    padding-left: 40px;
+    
+}
+
+
+h1{
+    text-align: center;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

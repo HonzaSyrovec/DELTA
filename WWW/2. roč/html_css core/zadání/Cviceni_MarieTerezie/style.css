@@ -1,0 +1,12 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+h1,h2{font-size: 16px;font-family: Arial, Helvetica, sans-serif; color: gold; text-align: center;}
+p{font-family: 'Times New Roman', Cambria, serif; font-size: 12px; text-align: justify; line-height: 1,5 ; }
+ul li{font-weight: bold}
+ol li{font-style: italic}
+#nadpis{font-size: 4em; font-weight: bold!important}
+.children{color: red; text-decoration: underline}
+ul li a, ol li a {color: green; }
+img{width: 250px; height: 250px;}      

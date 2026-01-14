@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HTML formulář</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <form>
+    <h1> Ubytovací Formulář</h1> 
+      <fieldset>
+        <legend>Osobní údaje:</legend>
+        <label>Jméno a příjmení: </label><input type = text, name = jmeno><br>
+        <label>Email: </label><input type = email name = email><br>
+        <label>Datum narození: </label><<input type = date, name = datumnarozeni><br>
+        <label>Bydliště: </label><<input type = text, name = bydliste>
+      </fieldset>
+      <fieldset>
+        <legend>Obecné informace o objednávce</legend>
+        <label>Vyberte hotel: <input type = text, list = "hotely" name = jakyhotel><br>
+        <label>Jste kuřák? </label><select type = ""><br>
+        <label>Počet nocí</label>
+        <label>Požadované služby: </label>
+      </fieldset>
+      <fieldset>
+        <label>Přidejte poznámku personálu: </label><input type = text, width= >
+      </fieldset>
+
+      <datalist id = hotely>
+        <option value="Hotel Royale, Praha, Hradčanská 21"></option>
+        <option value="Hotel Hantex, Brno, Moravvská 8"></option>
+        <option value="...atd"></option>
+
+    </form>
+
+  </body>
+</html>

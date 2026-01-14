@@ -1,0 +1,29 @@
+/* Reset základního vzhledu */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+nav a:hover{
+  color:rgb(255, 0, 0)
+}
+nav a.active::after{
+  content: " ";
+  background-color: red;
+  position:absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 800%;
+  left:0;
+}
+nav a.active{
+  position:relative;
+}
+.team li[data-role = "dev"]{
+  color: blue;
+}

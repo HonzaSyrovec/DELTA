@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+h1, h2{font-size: 20px; font-family: Arial, Helvetica, serif; color: navy;}
+p{font-size: 14px; font: Times, serif; text-align: justify; line-height: 1,5;}
+ul{font: bold}
+ol{font:italic; list-style: upper-roman;}
+image{height: 400px; width: 300;}
+#title{font-size: 5em; text-align: center}
+.highlighted{color: green; text-decoration: underline}
+ul li a, ol li a {color: purple;font-size: 16px; }
+table{border-width: 1px; border-style: dotted; border-color: black; text-align: center; }
+.category{text-transform: uppercase;}

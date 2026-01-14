@@ -1,0 +1,21 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Button styles */
+.transition-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.transition-btn:hover{
+  transition: scale;
+  transform: scale(2, 2);
+  transition-duration: 0,5s;
+  color: yellow;
+}

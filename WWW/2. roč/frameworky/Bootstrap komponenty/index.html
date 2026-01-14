@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Framework Overview</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+<!-- NAVBAR -->
+ <nav
+  class="navbar navbar-expand-lg navbar-light bg-light"
+ >
+  <div class="container">
+    <a class="navbar-brand" href="#">CSS Frameworks</a>
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" aria-current="page"
+            >Home
+            <span class="visually-hidden">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="dropdownId"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Dropdown</a
+          >
+          <div
+            class="dropdown-menu"
+            aria-labelledby="dropdownId"
+          >
+            <a class="dropdown-item" href="#"
+              >Action 1</a
+            >
+            <a class="dropdown-item" href="#"
+              >Action 2</a
+            >
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex my-2 my-lg-0">
+        <input
+          class="form-control me-sm-2"
+          type="text"
+          placeholder="Search"
+        />
+        <button
+          class="btn btn-outline-success my-2 my-sm-0"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+ </nav>
+ 
+  <nav>
+    <div>
+      <a href="#"></a>
+      <div>
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#examples">Examples</a></li>
+
+
+<!-- /NAVBAR -->
+
+  <header class="py-5 bg-white shadow-sm">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold">CSS Frameworks</h1>
+      <p class="lead text-muted">An overview inspired by the Wikipedia article on CSS Frameworks.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section id="intro" class="mb-5">
+      <h2 class="mb-3">Introduction</h2>
+      <!-- CARD -->
+      <div>
+        <div>
+          <p>
+            CSS frameworks are pre-prepared libraries designed to simplify the process of styling websites.
+            They offer reusable components, grid systems, and utility classes, allowing developers to build
+            responsive and visually consistent interfaces more efficiently.
+          </p>
+          <p>
+            Many frameworks focus on responsive design, enabling web pages to adapt to various screen sizes.
+            Others include JavaScript components or design systems for rapid prototyping and development.
+          </p>
+        </div>
+      </div>
+      <!-- /CARD -->
+    </section>
+
+    <section id="examples" class="mb-5">
+      <h2 class="mb-3">Popular CSS Frameworks</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+        <!-- CARD -->
+          <div>
+            <div>
+              <h5>Bootstrap</h5>
+              <p >One of the most widely used frameworks, offering extensive components,
+                utilities, and responsive grid system.</p>
+              <a href="https://getbootstrap.com" target="_blank">Visit</a> <!-- BUTTON-->
+            </div>
+          </div>
+          <!-- /CARD -->
+        </div>
+        <div class="col-md-4">
+            <!-- CARD -->
+          <div>
+            <div>
+              <h5>Tailwind CSS</h5>
+              <p>A utility-first framework providing low-level classes for building custom
+                designs without opinionated components.</p>
+              <a href="https://tailwindcss.com" target="_blank">Visit</a> <!-- BUTTON-->
+            </div>
+          </div>
+           <!-- /CARD -->
+        </div>
+        <div class="col-md-4">
+            <!-- CARD -->
+          <div>
+            <div class="card-body">
+              <h5>Foundation</h5>
+              <p>A responsive front-end framework with advanced layout tools and flexible UI elements.</p>
+              <a href="https://get.foundation" target="_blank">Visit</a> <!-- BUTTON-->
+            </div>
+          </div>
+           <!-- /CARD -->
+        </div>
+      </div>
+    </section>
+    <section class="mb-5">
+        <h2 class="mb-3">Benefits & Drawbacks</h2>
+    
+        <!-- ACCORDION -->
+        <div>
+            <!-- ACCORDION ITEM -->
+            <div>
+                <h2>
+                    <button>
+                        Benefits
+                    </button>
+                </h2>
+                <div>
+                    <div>
+                        <ul>
+                            <li>Faster development</li>
+                            <li>Consistent design patterns</li>
+                            <li>Responsive layouts built in</li>
+                            <li>Large community support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /ACCORDION ITEM -->
+    
+            <!-- ACCORDION ITEM -->
+            <div>
+                <h2>
+                    <button>
+                        Drawbacks
+                    </button>
+                </h2>
+                <div>
+                    <div>
+                        <ul>
+                            <li>Potentially bloated CSS</li>
+                            <li>Sites may look similar</li>
+                            <li>Learning curve for framework syntax</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /ACCORDION ITEM -->
+        </div>
+        <!-- /ACCORDION -->
+    </section>
+    <!-- ALERT WARNING -->
+    <section class="mb-5">
+        <div role="alert">
+                This is alert message to notify users about something important regarding CSS frameworks.
+        </div>
+    <!-- /ALERT WARNING -->
+</section>
+    
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <small>Page generated using Bootstrap components.</small>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

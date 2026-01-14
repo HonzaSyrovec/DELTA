@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+h1{
+  text-align: center;
+  font-family: sans-serif;
+}
+.task{
+  text-align: center;
+  font-family: sans-serif;
+  border: 1px, solid, lightgrey;
+  margin-top: 5px;
+  list-style: none;
+  padding: 5px;
+}
+.task_complete{
+  text-align: center;
+  font-family: sans-serif;
+  border: 1px, solid, lightgrey;
+  margin-top: 5px;
+  color: blue;
+  list-style: none;
+  padding: 5px;
+}
+ .task:hover{
+  background-color: yellow;
+  font-weight: bold;
+ }
+  .task_complete:hover{
+  background-color: yellow;
+  font-weight: bold;
+ }
+ .task:first-child:before{
+  content: "⭐";
+ }

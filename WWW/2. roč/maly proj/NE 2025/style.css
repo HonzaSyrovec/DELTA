@@ -1,0 +1,255 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: black;
+    line-height: 1.2;
+}
+.programbox{
+    max-height: 20%;
+    align-items: center;
+    background-color: lightblue;
+    padding: 25x;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border: 2px solid blue;
+    text-align: center;
+}
+.program-icon {
+    max-width: 70%;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+}
+
+
+.background-image {
+    position: fixed;
+    inset: 0;
+    background: url('assets/images/duchodci.webp') center/cover no-repeat;
+    filter: blur(5px);
+    z-index: -2;
+}
+
+
+
+header {
+    z-index: 100;
+    position: sticky;
+    top:0;
+    background-color: blue;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+ul{
+    list-style-type: none;
+}
+
+
+section {
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    padding: 60px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 20px;
+    font-size: 200%;
+}
+
+h3 {
+    color: blue;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.foreword-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.foreword-text {
+    flex: 1 1 400px;
+    min-width: 250px;
+}
+
+.rep-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.rep-img {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rep-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.card-grid {
+    flex: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    
+    width: 80%;
+    background-color: lightblue;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.card img {
+    max-width: 60%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.eventbox {
+    max-height: 20%;
+    align-items: center;
+    background-color: lightblue;
+    padding: 25x;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border: 2px solid blue;
+    text-align: center;
+}
+
+.event-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+.eventbox img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-row {
+    text-decoration: underline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    gap: 30px;
+}
+
+.contact-row p, a {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 5px;
+}
+
+.address {
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    border: 2px, solid, blue;
+}
+
+.address-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact {
+    text-align: center;
+}
+
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+
+@media (max-width: 700px) {
+    .foreword-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .predseda-img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    nav a {
+        font-size: 25px;
+    }
+}

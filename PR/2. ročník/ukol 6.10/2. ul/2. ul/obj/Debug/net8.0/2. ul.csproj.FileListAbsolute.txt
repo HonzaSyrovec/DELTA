@@ -1,0 +1,14 @@
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\bin\Debug\net8.0\2. ul.exe
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\bin\Debug\net8.0\2. ul.deps.json
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\bin\Debug\net8.0\2. ul.runtimeconfig.json
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\bin\Debug\net8.0\2. ul.dll
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\bin\Debug\net8.0\2. ul.pdb
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\2. ul.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\2. ul.AssemblyInfoInputs.cache
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\2. ul.AssemblyInfo.cs
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\2. ul.csproj.CoreCompileInputs.cache
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\2. ul.dll
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\refint\2. ul.dll
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\2. ul.pdb
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\2. ul.genruntimeconfig.cache
+C:\Users\JanSy\Desktop\PR PROJEKTY\2. ročník\ukol 6.10\2. ul\2. ul\obj\Debug\net8.0\ref\2. ul.dll

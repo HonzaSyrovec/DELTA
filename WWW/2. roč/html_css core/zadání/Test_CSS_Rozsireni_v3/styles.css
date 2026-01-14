@@ -1,0 +1,178 @@
+/* Reset */
+body, h1, h2, p, ul, li, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.8;
+    color: #222;
+    background-color: #e9ecef;
+    padding: 10px;
+}
+
+/* Header */
+header {
+    background: #444;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid #666;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+nav ul {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+
+    list-style: none;
+    margin-top: 10px;
+    transition: all, 1s;
+}
+
+nav ul li {
+    max-width: 200px;
+    min-width: 120px;
+    margin: 0 15px;
+    padding: 0 15px;
+    border: 2px solid #f8f9fa;
+}
+nav ul li a:hover{
+    color: yellowgreen;
+}
+
+nav ul li a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #f8f9fa;
+}
+
+/* Main Content */
+main {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+h2 {
+    border-bottom: 2px solid #ffc107;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul {
+    margin-left: 20px;
+}
+#life{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+
+}
+.sekce ul{
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: auto;
+    
+
+}
+.sekce ul li{
+    width: 150px;
+    border: 2px solid #ffc107;
+}
+
+
+.sekce {
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #ffc107;
+    padding: 10px;
+    border-radius: 4px;
+    width: 30%;
+}
+
+/* Influence */
+#influence ul{
+    list-style: none;
+    display: grid;
+    gap: 10px;  
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    
+}
+#influence li{
+    border: 2px solid #ffc107;
+}
+#influence ul li ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#influence ul li ul li{
+    width: 150px;
+    padding: 10px;
+
+}
+/* Gallery */
+.gallery {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.gallery img:hover{
+    border: 5px solid #ffc107;
+    transform: scale(1.5)
+}
+
+/* Barrel */
+
+#sud img {
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    background-color: #ffc107;
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    background: #444;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+footer p {
+    margin: 0;
+}
