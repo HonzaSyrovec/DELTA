@@ -1,35 +1,72 @@
-/* základní reset a typografie */
-* {
+
+*{
     box-sizing: border-box;
 }
-
-/* tělo stránky */
 body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-image: url('pozadi.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-/* hlavička webu */
 header {
-}
+    position: sticky;
+    width: 100%;
+    top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: red;
 
-/* navigační menu */
-nav {
 }
-
-/* odkazy v navigaci */
+header h1 {
+    margin: 0;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 nav a {
+    z-index: 1000;
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
 }
-
-/* hlavní obsah */
 main {
+    height: auto;
+    max-width: 66%;
+    margin: 2rem auto;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
-
 /* úvodní sekce na homepage */
 .uvod {
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: black;
+    color: red;
+    padding: 2rem;
 }
 
 /* textový manifest / atypický blok */
 .marketin {
+    align-items: center
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: black;
+    color: red;
+    padding: 2rem;
 }
 
 /* sekce služeb */
@@ -55,4 +92,31 @@ main {
 
 /* patička */
 footer {
+    text-align: left;
+    background-color: red;
+    color: black;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    main,
+    section {
+        max-width: none;
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+        nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    nav a {
+        text-align: right;
+        display: block;
+        width: 100%;
+        padding-right: 1rem;
+    }
 }
