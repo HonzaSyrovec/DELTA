@@ -1,0 +1,58 @@
+/* základní reset a typografie */
+* {
+    box-sizing: border-box;
+}
+
+/* tělo stránky */
+body {
+    margin: 0;
+}
+
+/* hlavička webu */
+header {
+}
+
+/* navigační menu */
+nav {
+}
+
+/* odkazy v navigaci */
+nav a {
+}
+
+/* hlavní obsah */
+main {
+}
+
+/* úvodní sekce na homepage */
+.uvod {
+}
+
+/* textový manifest / atypický blok */
+.marketin {
+}
+
+/* sekce služeb */
+.sluzby {
+}
+
+/* jednotlivá služba */
+.sluzby article {
+}
+
+/* kontaktní formulář */
+.kontaktni-formular {
+}
+
+/* vstupní pole formuláře */
+.kontaktni-formular input,
+.kontaktni-formular textarea {
+}
+
+/* tlačítko formuláře */
+.kontaktni-formular button {
+}
+
+/* patička */
+footer {
+}
