@@ -1,0 +1,30 @@
+/* tento soubor neměňte */
+
+#toggleClass, #multiclass, #classList {
+  border: 1px solid lightgray;
+  margin: 1ex 0;
+  padding: 1ex;
+}
+
+.fancy {
+  font-style: italic;
+  font-weight: bold;
+  color: hotpink;
+}
+
+.fat {
+  font-weight:bold
+}
+
+.redish {
+  color: red;
+  background-color: black;
+}
+
+.huge {
+  font-size: xx-large;
+}
+
+button {
+  margin: 0.3ex;
+}

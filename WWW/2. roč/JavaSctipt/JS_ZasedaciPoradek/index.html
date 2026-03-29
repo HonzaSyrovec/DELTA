@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zasedací pořádek - Procvičování JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Zasedací pořádek</h1>
+            <div class="controls">
+                <label for="rows">Počet řad:</label>
+                <input type="number" id="rows" min="1" max="10" value="3">
+                
+                <label for="desks">Lavic v řadě:</label>
+                <input type="number" id="desks" min="1" max="10" value="4">
+                
+                <button id="generate-btn">Vytvořit učebnu</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="pool-section">
+                <h2>Neusazení studenti</h2>
+                <div id="student-pool" class="student-pool">
+                    </div>
+            </section>
+
+            <section class="classroom-section">
+                <h2>Učebna (Katedra je nahoře)</h2>
+                <div class="teacher-desk">Katedra</div>
+                <div id="classroom" class="classroom">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

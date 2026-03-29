@@ -1,0 +1,35 @@
+<!-- Tento soubor neměňte -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <div class="container">
+    <p id="toggleClass">My class “fancy” can be toggled (added or removed) on this paragraph</p><button id="toggleFancy" class="btn btn-primary">Toggle fancy class</button>
+
+    <p id="multiclass">Classes “fat”, “reddish” and “huge” can be added or removed to this paragraph</p>
+    <div id="btnArea">
+        <button id="addFat" class="btn btn-primary">Add “fat” class</button>
+        <button id="removeFat" class="btn btn-primary">Remove “fat” class</button>
+        <button id="addRedish" class="btn btn-primary">Add “redish” class</button>
+        <button id="removeRedish" class="btn btn-primary">Remove “redish” class</button>
+        <button id="addHuge" class="btn btn-primary">Add “huge” class</button>
+        <button id="removeHuge" class="btn btn-primary">Remove “huge” class</button>
+    </div>
+    
+    <p>This list shows all classes of the above paragraph:</p>
+    <ul id="classList"></ul>
+    
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
