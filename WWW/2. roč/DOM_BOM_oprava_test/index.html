@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktivní FAQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <h1>Správa dotazů (FAQ)</h1>
+        
+        <div id="faq-list">
+            <div class="faq-item">
+                <div class="faq-controls">
+                    <h3 class="faq-question">Jaké jsou otevírací hodiny?</h3>
+                    <button class="faq-delete" title="Smazat dotaz">✖</button>
+                </div>
+                <div class="faq-answer hidden">Otevřeno máme každý všední den od 8:00 do 16:00.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-controls">
+                    <h3 class="faq-question">Kde vás najdu?</h3>
+                    <button class="faq-delete" title="Smazat dotaz">✖</button>
+                </div>
+                <div class="faq-answer hidden">Naše pobočka se nachází v centru města na hlavní ulici.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-controls">
+                    <h3 class="faq-question">Mohu platit kartou?</h3>
+                    <button class="faq-delete" title="Smazat dotaz">✖</button>
+                </div>
+                <div class="faq-answer hidden">Ano, přijímáme všechny běžné platební karty i hotovost.</div>
+            </div>
+        </div>
+
+        <div id="faq-editor">
+            <h2>Úprava odpovědi</h2>
+            <p class="help-text">Klikněte na jakoukoliv zobrazenou odpověď pro její úpravu.</p>
+            <textarea id="edit-input" rows="4" placeholder="Zde se objeví text k úpravě..."></textarea>
+            <button id="save-btn">Uložit změny</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

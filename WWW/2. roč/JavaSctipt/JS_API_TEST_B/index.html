@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agilní Kanban Tabule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vývojářský Kanban</h1>
+    </header>
+
+    <section class="form-section">
+        <form id="new-task-form">
+            <input type="text" id="taskTitle" placeholder="Název úkolu" required>
+            
+            <!-- Input propojený s datalistem pro našeptávání -->
+            <input type="text" id="taskDev" list="dev-list" placeholder="Zodpovědná osoba" required>
+            <datalist id="dev-list">
+                <!-- Zde bude JavaScript dynamicky tvořit <option> elementy -->
+            </datalist>
+
+            <button type="submit" class="btn">Přidat úkol</button>
+        </form>
+    </section>
+
+    <!-- KANBAN BOARD -->
+    <main class="kanban-board">
+        <div class="column" id="col-todo">
+            <h2>K Udělání (To Do)</h2>
+            <!-- Sem JS vloží karty se statusem 'todo' -->
+             <!-- =========================================================
+                 VZOR KARTY ÚKOLU (Generujte pomocí JavaScriptu)
+                 Poznámka: Tlačítko "Posunout dál" nevykreslujte, 
+                 pokud je úkol ve sloupci "Hotovo" (done).
+                 =========================================================
+            <div class="task-card" data-id="1" data-status="todo">
+                <h3>Nastylovat hlavičku webu</h3>
+                <p>Dev: Eva Rychlá</p>
+                <button class="move-btn">Posunout dál</button>
+            </div>
+            -->
+        </div>
+
+        <div class="column" id="col-in-progress">
+            <h2>Zpracovává se (In Progress)</h2>
+            <!-- Sem JS vloží karty se statusem 'in_progress' -->
+        </div>
+
+        <div class="column" id="col-done">
+            <h2>Hotovo (Done)</h2>
+            <!-- Sem JS vloží karty se statusem 'done' -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
