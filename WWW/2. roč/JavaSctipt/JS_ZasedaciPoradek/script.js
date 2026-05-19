@@ -3,7 +3,84 @@ const students = [
     "Jakub Procházka", "Tereza Kučerová", "Lukáš Veselý", "Klára Horáková",
     "Martin Němec", "Veronika Pokorná", "Filip Marek", "Lucie Hájková"
 ];
+const tlacitko = document.getElementById("generate-btn")
+const classroom = document.getElementById("classroom")
+const studentPool = document.getElementById("student-pool")
 
+
+let tahanyStudent = null
+
+students.forEach(jmeno => {
+    const student = document.createElement("div")
+    student.classList.add("student")
+    student.textContent = jmeno
+    student.setAttribute("draggable", "true")
+    studentPool.appendChild(student)
+})
+
+tlacitko.addEventListener("click", () => {
+    const pocetRad = document.getElementById("rows").value
+    const pocetLavic = document.getElementById("desks").value
+
+    classroom.innerHTML = ""
+
+    for (let r = 0; r < pocetRad; r++) {
+        const rada = document.createElement("div")
+        rada.classList.add("row")
+
+        for (let l = 0; l < pocetLavic; l++) {
+            const lavice = document.createElement("div")
+            lavice.classList.add("desk")
+
+            rada.appendChild(lavice)
+        }
+
+        classroom.appendChild(rada)
+    }
+
+    nastavDragAndDrop()
+})
+
+function nastavDragAndDrop() {
+    const studenti = document.querySelectorAll(".student")
+    const lavice = document.querySelectorAll(".desk")
+
+    studenti.forEach(student => {
+        student.addEventListener("dragstart", (e) => {
+            tahanyStudent = e.target
+        })
+    })
+
+    lavice.forEach(desk => {
+
+        desk.addEventListener("dragover", (e) => {
+            e.preventDefault()
+        })
+
+        desk.addEventListener("dragenter", () => {
+            desk.classList.add("drag-over")
+        })
+
+        desk.addEventListener("dragleave", () => {
+            desk.classList.remove("drag-over")
+        })
+
+        desk.addEventListener("drop", () => {
+            desk.classList.remove("drag-over")
+
+            if (!tahanyStudent) return
+
+            const staryStudent = desk.querySelector(".student")
+
+            if (staryStudent) {
+                studentPool.appendChild(staryStudent)
+            }
+
+            desk.appendChild(tahanyStudent)
+            tahanyStudent = null
+        })
+    })
+}
 /**
  * ============================================================================
  * ZADÁNÍ: Tvorba a zasedací pořádek učebny
