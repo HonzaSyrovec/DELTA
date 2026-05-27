@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D4638EF9-C0FB-FC2E-82DC-46BFECF21C7D" name="Produkt">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:20:33 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Produkt_ID" id="8A88D4A1-AF2C-CA0E-A91D-079930B3DCB5">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:20:40 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazev" id="70CDC851-7102-3184-F308-01505945027C">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:20:59 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Popis" id="BD9C1F87-21AF-9418-BF1E-1F544569C82A">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:21:50 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cena" id="F515067F-325F-D38E-79F3-368576A547AF">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:22:12 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kusu_Skladem" id="B177BF5A-C30A-B3AF-0683-E814B53EEBA7">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:27:24 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Datum_Uvedeni" id="A2C9BA6A-2679-03A9-1900-38AD7D831A31">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:24:04 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kategorie" id="C043577B-F79D-76DD-3FBD-15860C248458">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:24:51 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Vyrobce" id="7CCBE16B-4EDA-2C4A-0855-9CEDAF98FEB9">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-27 06:25:01 UTC</createdTime>
+<ownerDesignName>proj</ownerDesignName>
+<engineerTo>
+<item key="98598472-AD06-F4D7-43E2-F3E33234331F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
