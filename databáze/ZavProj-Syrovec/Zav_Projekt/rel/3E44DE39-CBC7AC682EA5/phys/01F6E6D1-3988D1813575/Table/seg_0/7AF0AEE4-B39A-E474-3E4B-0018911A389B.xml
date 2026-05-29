@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="objednavka" directorySegmentName="seg_0" id="7AF0AEE4-B39A-E474-3E4B-0018911A389B">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="celkova_cena" id="09ED03BB-7BA1-B8C8-888A-5AC144797AF3">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_prodejna" id="29483153-84B8-6377-68C4-B94B79411332">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_objednavka" id="5E79E754-1FF0-769A-04F4-B2E4620AF55E">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="stav" id="9588CBFC-C9F1-9523-6169-8D9CC25065E8">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="datum_vytvoreni" id="DBF2DD6F-31D9-0B0E-D761-7CF152564176">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="zpusob_platby" id="DC01DD2B-F41D-6958-4B9E-D92A8D74BBBB">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="zpusob_dopravy" id="DEDF2F5A-974B-B709-A6B2-29E98AABC879">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="jmeno_zadavatele" id="E30BEE26-96AD-4A79-FA6A-ECC547267065">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="objednavka_prodejna_FK" id="096FB2F4-969A-EC7C-2FE0-C6445430F362">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="objednavka_PK" id="001B29EB-E9BF-3ECA-187D-9C31A3E4D735">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8DC8ECDA-EDCF-7E40-CF50-8B0F3739F0E2" name="zamestnanec">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>1EA1E450-49DE-9A6F-D3D2-4078C4C66E30</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id zamestnanec" id="A365D0B7-4502-30D2-B2BF-83DC2B6F29AD">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>67FF3923-3B91-AADE-4838-6DA268BC7886</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="jmeno" id="6359FB0B-E2B9-5FCB-204C-7FC65CC19C09">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>3512DFFD-0128-0CA8-1FEE-97815857536D</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0EE6D93C-3331-8B9F-01CB-8740EAFFB339</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prijmeni" id="1EF47481-5DF5-1F38-10F8-EA123E5C3DC8">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>4C0430CF-2262-C352-5A8A-E1CEBB07C3CA</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0EE6D93C-3331-8B9F-01CB-8740EAFFB339</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pozice" id="922252D6-C2CC-395B-EB21-8C6A3425584D">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>0FBD4084-2248-1956-419F-0FB4BF0A1D67</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0EE6D93C-3331-8B9F-01CB-8740EAFFB339</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plat" id="FDE2AC2C-98D7-245A-5E9F-F1CCBF6D14F5">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>F3B82BB7-7714-CD0D-47F3-9304BAA1FE40</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A6F866A1-E49C-D2AE-833C-37AC77BE927E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="datum nastupu" id="3E3263B6-053A-ECB9-A03C-FD569051B09F">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>754DBCFF-5630-FB20-D920-FDC90D435E3A</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>18228CDF-728A-363B-47EE-68BA1BE64485</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="smena" id="AA2AC3EE-DAD0-9078-505B-952DFD0506D3">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>2437B747-ABE2-372D-52B3-85AC3924CF01</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F0D23696-BB6F-BB32-14BF-5E3D6E05F80B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id prodejna" id="CEF9FFCD-9CE9-2A78-6A03-CA6F0522A276">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>CA26D047-3717-1D24-184E-09E94EB52E74</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CCD7A329-2F4E-7285-B9BA-054465C15B62</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7B7C1407-4741-6C13-63A6-D64546C37A3C" name="zamestnanec PK">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>FBA638AB-2D03-423E-7659-8E6058413575</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A365D0B7-4502-30D2-B2BF-83DC2B6F29AD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

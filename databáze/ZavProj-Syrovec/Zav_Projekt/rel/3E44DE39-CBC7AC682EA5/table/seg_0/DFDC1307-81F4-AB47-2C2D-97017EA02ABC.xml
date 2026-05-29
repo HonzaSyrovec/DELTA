@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DFDC1307-81F4-AB47-2C2D-97017EA02ABC" name="kategorie">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>09C42452-EE47-3F79-1812-8054359A44CC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_kategorie" id="399F8F1F-D031-86BC-AD53-9FC65E0E49C0">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>D10D7F87-8861-9BF5-1244-A49EC5A10D7C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazev" id="84549848-E6E1-9385-DAFE-0B642A59825F">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>5BA429B5-72DA-131F-3BDB-38EE181C713C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9120B460-92DF-736F-4EB6-1B627216DA1C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="popis" id="5C435E0E-B6F1-FB62-9A44-D0F161AF0971">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>58A658EF-A353-53A4-C127-6725BA773DA9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>547323D9-AC43-8AF9-D621-CBFC8191DD4D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2DD2B458-FF80-503A-580A-540CD1695342" name="kategorie_PK">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>E838DF45-20CC-951B-97D4-56D6D2AB341A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="399F8F1F-D031-86BC-AD53-9FC65E0E49C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="63008062-306A-A360-B0D9-3CA8ED8CE434" name="produkt">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>E672C1A5-6A74-C0A2-E7D5-F84ACE45C9A0</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_produkt" id="CEF0E50C-05E4-F796-C5F8-7DDE4660518C">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>D2803BA9-F456-28B2-18C0-FED5AEB8F851</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kod_produktu" id="6D171BE6-625A-0035-2AF5-32503C9CAFE9">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>3C772202-A5C1-F900-E635-5CC54B5A1AD1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0EE6D93C-3331-8B9F-01CB-8740EAFFB339</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazev" id="AC93EED7-ED92-C72A-2641-320B5BC19181">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>6282F7A3-A935-0E08-A799-FD14B5C63D1A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9120B460-92DF-736F-4EB6-1B627216DA1C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="popis" id="E10CBA03-DD90-2D13-94A4-0E2393FB2EDB">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>C939CAE5-50AD-58D6-50C7-DF42605B2F5C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1E2096F2-EC1C-BB21-8FBC-329A81FFF703</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cena" id="A7DE7B10-1887-D2C8-CF54-EDCAEA65AC0B">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>81B55E65-4E42-A7B1-BFB4-4E80D08589D7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A6F866A1-E49C-D2AE-833C-37AC77BE927E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="skladem" id="595D1D49-0699-D2EB-BE60-8173B32307E2">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>F61C6608-BCE0-F7F4-87D2-8A7B2AD7678F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="zaruka_mesice" id="DF74B33D-90FB-19AA-189A-019E2EA24738">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>0B55CDBF-7501-273D-31C5-B8D24CFF2FB3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="datum_uvedeni" id="43991B6F-B289-7231-665C-7783294F4BF9">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>0E610E8D-194F-98D1-A750-814EF194FCED</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>18228CDF-728A-363B-47EE-68BA1BE64485</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_kategorie" id="1D5C8C29-EED6-C140-8284-AE2A4C8F5DF5">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>136077C6-57B3-7E50-ACA6-2F450A4C5D5B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="90B6033C-8A7F-D73A-00D6-EFD9D856C48C" referredColumn="399F8F1F-D031-86BC-AD53-9FC65E0E49C0"/>
+</associations>
+</Column>
+<Column name="id_vyrobce" id="7454E537-2B57-A786-11EF-61CF9A0A5756">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>2767C3C3-5A8D-5038-3B01-76FB2565EB23</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4750800F-6DD6-35E7-C6F2-16808CFB0CEB" referredColumn="F1E5B8C4-9F6A-0D06-07AF-90E2A2AAABEF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0483960F-9477-8608-7C9A-1D2C3BC0DA3E" name="produkt_PK">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>6584AA5D-CA33-AEE2-6F3F-545211AFBEA9</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CEF0E50C-05E4-F796-C5F8-7DDE4660518C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B288DBBE-1753-824A-666F-FDAFBA77EC9E" name="produkt_kategorie_FK">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D5C8C29-EED6-C140-8284-AE2A4C8F5DF5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1670FF28-2ABC-A505-2326-6DFD1BF4754B" name="produkt_vyrobce_FK">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7454E537-2B57-A786-11EF-61CF9A0A5756"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

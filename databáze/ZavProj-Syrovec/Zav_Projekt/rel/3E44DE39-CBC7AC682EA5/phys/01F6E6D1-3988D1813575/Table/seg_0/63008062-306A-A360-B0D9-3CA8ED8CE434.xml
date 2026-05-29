@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="produkt" directorySegmentName="seg_0" id="63008062-306A-A360-B0D9-3CA8ED8CE434">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_kategorie" id="1D5C8C29-EED6-C140-8284-AE2A4C8F5DF5">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="datum_uvedeni" id="43991B6F-B289-7231-665C-7783294F4BF9">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="skladem" id="595D1D49-0699-D2EB-BE60-8173B32307E2">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="kod_produktu" id="6D171BE6-625A-0035-2AF5-32503C9CAFE9">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_vyrobce" id="7454E537-2B57-A786-11EF-61CF9A0A5756">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cena" id="A7DE7B10-1887-D2C8-CF54-EDCAEA65AC0B">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nazev" id="AC93EED7-ED92-C72A-2641-320B5BC19181">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_produkt" id="CEF0E50C-05E4-F796-C5F8-7DDE4660518C">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="zaruka_mesice" id="DF74B33D-90FB-19AA-189A-019E2EA24738">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="popis" id="E10CBA03-DD90-2D13-94A4-0E2393FB2EDB">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="produkt_vyrobce_FK" id="1670FF28-2ABC-A505-2326-6DFD1BF4754B">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="produkt_kategorie_FK" id="B288DBBE-1753-824A-666F-FDAFBA77EC9E">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="produkt_PK" id="0483960F-9477-8608-7C9A-1D2C3BC0DA3E">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

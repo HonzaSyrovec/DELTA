@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="21E7C4C1-4CCB-69B0-3C59-2ECC5D3D8970" name="prodejna produkt">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>A6006DAA-2D3C-1F26-6231-4B7031301C26</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id prodejna" id="C805AB13-C97F-962D-C1BC-DFB2A5D1462D">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>F1CBD1C9-AFEF-8274-4F0B-3EAFE82C6E1F</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<referedAttribute>CCD7A329-2F4E-7285-B9BA-054465C15B62</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id produkt" id="6A01603A-96AC-DCD7-3AE1-8EBD6315619C">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>E985BD81-EFA2-55F9-93CC-7981655E5A5D</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<referedAttribute>8FCC6585-BE7B-EA30-5323-002B804C1CE1</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mnozstvi" id="44A99144-3DA6-7110-2440-C89CF9947071">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>EEB839C9-BABC-81A7-EFB7-AB969CB9A40D</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="umisteni regal" id="1C3AAA68-A2ED-78F1-1CA9-06075EB018BF">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>239AD016-F1F0-C119-C7E2-91D69AC38A27</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F0D23696-BB6F-BB32-14BF-5E3D6E05F80B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FA2FE3B6-0254-DFBA-99F8-E9A3FFAD4EDD" name="prodejna produkt PK">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>EDBE24DD-204F-71A6-A22F-1E346AA3E411</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C805AB13-C97F-962D-C1BC-DFB2A5D1462D</attributeRef>
+<attributeRef>6A01603A-96AC-DCD7-3AE1-8EBD6315619C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

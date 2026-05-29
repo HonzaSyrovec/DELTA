@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="zamestnanec_prodejna_FK" directorySegmentName="seg_0" id="CA26D047-3717-1D24-184E-09E94EB52E74">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 19:43:33 UTC</createdTime>
+<generatorID>C8861D7E-0CC9-758A-4552-21085208440D</generatorID>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<engineerTo>
+<item key="3E44DE39-391C-695C-FACA-CBC7AC682EA5" value="true"/>
+</engineerTo>
+<sourcePk>3B61F723-40F4-08B1-7FFB-1BFF9E5C1169</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2F942139-0DBE-1943-D469-63176963B0D4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8DC8ECDA-EDCF-7E40-CF50-8B0F3739F0E2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

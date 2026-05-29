@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6006DAA-2D3C-1F26-6231-4B7031301C26" name="prodejna_produkt">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>DCDA634A-F1FA-184A-B459-1B55F0DBA419</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_prodejna" id="75035B52-9EA8-23FA-6185-08DC0E15AD5A">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>4DE57D53-251F-CD59-378F-48464409CB6A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EB28EE7-5A68-24CD-D8AD-6735D2281ABF" referredColumn="18FD05F5-1F3D-2EA2-BBC0-A74397421ACD"/>
+</associations>
+</Column>
+<Column name="id_produkt" id="ABCE3660-ACED-4A8A-7331-2B4B7C1B9ECB">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>A7A0892F-12B7-658F-A833-4CE02B1FB825</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4718524A-CD3C-E0E3-5CCE-373884329C61" referredColumn="CEF0E50C-05E4-F796-C5F8-7DDE4660518C"/>
+</associations>
+</Column>
+<Column name="mnozstvi" id="EEB839C9-BABC-81A7-EFB7-AB969CB9A40D">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>293D506D-FF43-7500-C5CE-60E5A43F872F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>028406CB-D216-A8F7-855E-2B235B48217A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="umisteni_regal" id="239AD016-F1F0-C119-C7E2-91D69AC38A27">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>0052FC0E-EF9E-5B0E-D332-A1DEB8E4EABF</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F0D23696-BB6F-BB32-14BF-5E3D6E05F80B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EDBE24DD-204F-71A6-A22F-1E346AA3E411" name="prodejna_produkt_PK">
+<sourceDDLFile>projscript.ddl</sourceDDLFile>
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<importedID>2E19EA87-7D16-AB92-1DF6-90CA3AFBFF6C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75035B52-9EA8-23FA-6185-08DC0E15AD5A"/>
+<colUsage columnID="ABCE3660-ACED-4A8A-7331-2B4B7C1B9ECB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49C07633-2A5C-079A-27A7-2719C1929096" name="prodejna_produkt_prodejna_FK">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75035B52-9EA8-23FA-6185-08DC0E15AD5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37DED73A-141B-7DD0-58EA-1370276118D8" name="prodejna_produkt_produkt_FK">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:28:13 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ABCE3660-ACED-4A8A-7331-2B4B7C1B9ECB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

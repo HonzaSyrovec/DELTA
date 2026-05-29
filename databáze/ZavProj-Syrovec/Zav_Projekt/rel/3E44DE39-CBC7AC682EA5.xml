@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="3E44DE39-391C-695C-FACA-CBC7AC682EA5" mainViewID="9321CDFC-75F7-E8F4-4D51-EBD377A60771">
+<createdBy>JanSy</createdBy>
+<createdTime>2026-05-28 17:19:30 UTC</createdTime>
+<ownerDesignName>Zav_Projekt</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>projscript.ddl</fileName>
+<pathName>C:\Users\JanSy\Desktop\DELTA\databáze</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>
