@@ -1,0 +1,59 @@
+1. Vypiš všechny produkty dražší než 20 000 Kč seřazené od nejdražšího po nejlevnější.
+
+2. Vypiš všechny zaměstnance s platem vyšším než 30 000 Kč seřazené podle příjmení.
+
+3. Vypiš výrobce a počet produktů, které dodávají, včetně průměrné ceny jejich produktů.
+
+4. Přidej novou kategorii produktů s názvem „Test“ a popisem „Testovací kategorie“.
+
+5. Zvyš cenu produktu s ID 1 o 5 %.
+
+6. Odstraň kategorii s ID 99.
+
+7. Vypiš všechny produkty a jejich ceny zaokrouhlené na celé koruny.
+
+8. Vypiš druhou odmocninu ceny každého produktu.
+
+9. Vypiš datum vytvoření objednávky a datum o jeden měsíc později.
+
+10. Vypiš zaměstnance a rok jejich nástupu do zaměstnání.
+
+11. Vypiš názvy všech produktů převedené na velká písmena.
+
+12. Vypiš délku názvu každého produktu.
+
+13. Vypiš všechny produkty společně s jejich výrobcem.
+
+14. Vypiš všechny produkty společně s jejich kategorií.
+
+15. Vypiš zaměstnance a prodejny, na kterých pracují.
+
+16. Vypiš všechny objednávky a prodejny, ve kterých byly vytvořeny.
+
+17. Vypiš položky objednávek a názvy objednaných produktů.
+
+18. Vypiš objednávky, objednané produkty a jejich množství.
+
+19. Zjisti celkový počet produktů v databázi.
+
+20. Zjisti celkovou hodnotu všech objednávek.
+
+21. Vypiš počet produktů v jednotlivých kategoriích.
+
+22. Vypiš průměrný plat zaměstnanců na jednotlivých prodejnách.
+
+23. Vypiš všechny produkty, jejichž cena je vyšší než průměrná cena všech produktů.
+
+24. Vypiš zaměstnance s nejvyšším platem.
+
+25. Vypiš všechny produkty od výrobců pocházejících z USA.
+
+26. Vypiš produkty, jejichž cena je vyšší než cena alespoň jednoho notebooku.
+
+27. Vypiš produkty, jejichž cena je vyšší než průměrná cena produktů ve stejné kategorii.
+
+28. Vytvoř pohled obsahující názvy produktů a jejich ceny.
+
+29. Vytvoř pohled zobrazující objednávky, zákazníky, produkty a objednaná množství.
+
+30. Vypiš pět nejdražších produktů pomocí in-line pohledu.

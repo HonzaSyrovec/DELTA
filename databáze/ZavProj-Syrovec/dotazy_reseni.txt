@@ -1,0 +1,327 @@
+--------------------------------------------------------------------------------
+-- 1
+-- Přirozený dotaz:
+-- Vypiš všechny produkty dražší než 20 000 Kč seřazené od nejdražšího.
+
+SELECT *
+FROM produkt
+WHERE cena > 20000
+ORDER BY cena DESC;
+
+--------------------------------------------------------------------------------
+-- 2
+-- Přirozený dotaz:
+-- Vypiš všechny zaměstnance s platem vyšším než 30 000 Kč seřazené podle příjmení.
+
+SELECT *
+FROM zamestnanec
+WHERE plat > 30000
+ORDER BY prijmeni;
+
+--------------------------------------------------------------------------------
+-- 3
+-- Přirozený dotaz:
+-- Vypiš výrobce a počet produktů, které dodávají, včetně průměrné ceny produktů.
+
+SELECT
+    v.nazev AS vyrobce,
+    COUNT(*) AS pocet_produktu,
+    ROUND(AVG(p.cena),2) AS prumerna_cena
+FROM produkt p
+JOIN vyrobce v
+ON p.id_vyrobce = v.id_vyrobce
+GROUP BY v.nazev;
+
+--------------------------------------------------------------------------------
+-- 4
+-- Přirozený dotaz:
+-- Přidej novou kategorii Test.
+
+INSERT INTO kategorie
+VALUES (99,'Test','Testovaci kategorie');
+
+--------------------------------------------------------------------------------
+-- 5
+-- Přirozený dotaz:
+-- Zvyš cenu produktu s ID 1 o 5 %.
+
+UPDATE produkt
+SET cena = cena * 1.05
+WHERE id_produkt = 1;
+
+--------------------------------------------------------------------------------
+-- 6
+-- Přirozený dotaz:
+-- Odstraň kategorii s ID 99.
+
+DELETE FROM kategorie
+WHERE id_kategorie = 99;
+
+--------------------------------------------------------------------------------
+-- 7
+-- Přirozený dotaz:
+-- Vypiš všechny produkty a jejich ceny zaokrouhlené na celé koruny.
+
+SELECT nazev,
+       ROUND(cena)
+FROM produkt;
+
+--------------------------------------------------------------------------------
+-- 8
+-- Přirozený dotaz:
+-- Vypiš druhou odmocninu ceny každého produktu.
+
+SELECT nazev,
+       SQRT(cena)
+FROM produkt;
+
+--------------------------------------------------------------------------------
+-- 9
+-- Přirozený dotaz:
+-- Vypiš datum vytvoření objednávky a datum o jeden měsíc později.
+
+SELECT datum_vytvoreni,
+       ADD_MONTHS(datum_vytvoreni,1)
+FROM objednavka;
+
+--------------------------------------------------------------------------------
+-- 10
+-- Přirozený dotaz:
+-- Vypiš zaměstnance a rok jejich nástupu.
+
+SELECT jmeno,
+       EXTRACT(YEAR FROM datum_nastupu)
+FROM zamestnanec;
+
+--------------------------------------------------------------------------------
+-- 11
+-- Přirozený dotaz:
+-- Vypiš názvy všech produktů velkými písmeny.
+
+SELECT UPPER(nazev)
+FROM produkt;
+
+--------------------------------------------------------------------------------
+-- 12
+-- Přirozený dotaz:
+-- Vypiš délku názvu každého produktu.
+
+SELECT nazev,
+       LENGTH(nazev)
+FROM produkt;
+
+--------------------------------------------------------------------------------
+-- 13
+-- Přirozený dotaz:
+-- Vypiš všechny produkty společně s jejich výrobcem.
+
+SELECT p.nazev,
+       v.nazev
+FROM produkt p
+JOIN vyrobce v
+ON p.id_vyrobce = v.id_vyrobce;
+
+--------------------------------------------------------------------------------
+-- 14
+-- Přirozený dotaz:
+-- Vypiš všechny produkty společně s jejich kategorií.
+
+SELECT p.nazev,
+       k.nazev
+FROM produkt p
+JOIN kategorie k
+ON p.id_kategorie = k.id_kategorie;
+
+--------------------------------------------------------------------------------
+-- 15
+-- Přirozený dotaz:
+-- Vypiš zaměstnance a prodejny, na kterých pracují.
+
+SELECT z.jmeno,
+       z.prijmeni,
+       p.nazev
+FROM zamestnanec z
+JOIN prodejna p
+ON z.id_prodejna = p.id_prodejna;
+
+--------------------------------------------------------------------------------
+-- 16
+-- Přirozený dotaz:
+-- Vypiš všechny objednávky a prodejny, ve kterých byly vytvořeny.
+
+SELECT o.id_objednavka,
+       p.nazev
+FROM objednavka o
+JOIN prodejna p
+ON o.id_prodejna = p.id_prodejna;
+
+--------------------------------------------------------------------------------
+-- 17
+-- Přirozený dotaz:
+-- Vypiš položky objednávek a názvy objednaných produktů.
+
+SELECT po.id_polozka,
+       pr.nazev
+FROM polozka_objednavky po
+JOIN produkt pr
+ON po.id_produkt = pr.id_produkt;
+
+--------------------------------------------------------------------------------
+-- 18
+-- Přirozený dotaz:
+-- Vypiš objednávky, objednané produkty a jejich množství.
+
+SELECT o.id_objednavka,
+       pr.nazev,
+       po.mnozstvi
+FROM objednavka o
+JOIN polozka_objednavky po
+ON o.id_objednavka = po.id_objednavka
+JOIN produkt pr
+ON po.id_produkt = pr.id_produkt;
+
+--------------------------------------------------------------------------------
+-- 19
+-- Přirozený dotaz:
+-- Zjisti celkový počet produktů v databázi.
+
+SELECT COUNT(*) AS pocet_produktu
+FROM produkt;
+
+--------------------------------------------------------------------------------
+-- 20
+-- Přirozený dotaz:
+-- Zjisti celkovou hodnotu všech objednávek.
+
+SELECT SUM(celkova_cena)
+FROM objednavka;
+
+--------------------------------------------------------------------------------
+-- 21
+-- Přirozený dotaz:
+-- Vypiš počet produktů v jednotlivých kategoriích.
+
+SELECT id_kategorie,
+       COUNT(*)
+FROM produkt
+GROUP BY id_kategorie;
+
+--------------------------------------------------------------------------------
+-- 22
+-- Přirozený dotaz:
+-- Vypiš průměrný plat zaměstnanců na jednotlivých prodejnách.
+
+SELECT id_prodejna,
+       AVG(plat)
+FROM zamestnanec
+GROUP BY id_prodejna;
+
+--------------------------------------------------------------------------------
+-- 23
+-- Přirozený dotaz:
+-- Vypiš všechny produkty dražší než průměrná cena všech produktů.
+
+SELECT *
+FROM produkt
+WHERE cena >
+(
+    SELECT AVG(cena)
+    FROM produkt
+);
+
+--------------------------------------------------------------------------------
+-- 24
+-- Přirozený dotaz:
+-- Vypiš zaměstnance s nejvyšším platem.
+
+SELECT *
+FROM zamestnanec
+WHERE plat =
+(
+    SELECT MAX(plat)
+    FROM zamestnanec
+);
+
+--------------------------------------------------------------------------------
+-- 25
+-- Přirozený dotaz:
+-- Vypiš všechny produkty od výrobců pocházejících z USA.
+
+SELECT *
+FROM produkt
+WHERE id_vyrobce IN
+(
+    SELECT id_vyrobce
+    FROM vyrobce
+    WHERE zeme_puvodu = 'USA'
+);
+
+--------------------------------------------------------------------------------
+-- 26
+-- Přirozený dotaz:
+-- Vypiš produkty, jejichž cena je vyšší než cena alespoň jednoho notebooku.
+
+SELECT *
+FROM produkt
+WHERE cena > ANY
+(
+    SELECT cena
+    FROM produkt
+    WHERE id_kategorie = 1
+);
+
+--------------------------------------------------------------------------------
+-- 27
+-- Přirozený dotaz:
+-- Vypiš produkty, jejichž cena je vyšší než průměrná cena produktů ve stejné kategorii.
+
+SELECT *
+FROM produkt p
+WHERE cena >
+(
+    SELECT AVG(cena)
+    FROM produkt
+    WHERE id_kategorie = p.id_kategorie
+);
+
+--------------------------------------------------------------------------------
+-- 28
+-- Přirozený dotaz:
+-- Vytvoř pohled obsahující názvy produktů a jejich ceny.
+
+CREATE VIEW vw_produkty AS
+SELECT nazev,
+       cena
+FROM produkt;
+
+--------------------------------------------------------------------------------
+-- 29
+-- Přirozený dotaz:
+-- Vytvoř pohled zobrazující objednávky, zákazníky, produkty a objednaná množství.
+
+CREATE VIEW vw_objednavky AS
+SELECT
+    o.id_objednavka,
+    o.jmeno_zadavatele,
+    pr.nazev,
+    po.mnozstvi
+FROM objednavka o
+JOIN polozka_objednavky po
+ON o.id_objednavka = po.id_objednavka
+JOIN produkt pr
+ON po.id_produkt = pr.id_produkt;
+
+--------------------------------------------------------------------------------
+-- 30
+-- Přirozený dotaz:
+-- Vypiš pět nejdražších produktů pomocí in-line pohledu.
+
+SELECT *
+FROM
+(
+    SELECT nazev,
+           cena
+    FROM produkt
+    ORDER BY cena DESC
+)
+WHERE ROWNUM <= 5;
