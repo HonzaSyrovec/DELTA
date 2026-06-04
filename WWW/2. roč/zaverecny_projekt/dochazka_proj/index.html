@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="manifest" href="manifest.json"/>
+    <title>Docházka</title>
+  </head>
+  <body>
+    <header> 
+    <h1>Docházka šermu</h1>
+    </header>
+    <main>
+        <section id="start-section">
+            <button id="new-session-btn">Zapsat novou lekci</button>
+        </section>
+
+        <section id="attendance-section" style="display:none;">
+        <h2>Docházka</h2>
+        <p id="session-info"></p>
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>Jméno</th>
+                    <th>Přítomen</th>
+                </tr>
+            </thead>
+            <tbody id="attendance-body">
+            </tbody>
+        </table>
+        <input type="text" id="session-desc" placeholder="Popis lekce (nepovinné)"/>
+        <button id="attendance-save">Uložit docházku</button>
+        <button id="attendance-close">Zavřít</button>
+        </section>
+
+        <section id= "student-section">
+        <h2>Seznam žáků</h2>
+        <ul id="student-list">
+        </ul>
+        <input type="text" id="student-name" placeholder="Jméno žáka"/>
+        <button id="student-add">Přidat žáka</button>
+        </section>
+
+        <section id="session-search-section">
+        <h2>Vyhledat lekci</h2>
+        <input type="date" id="session-date" />
+        <button id="session-load">Načíst</button>
+        <button id="session-delete" style="display:none;">Smazat lekci</button>
+        <button id="session-close" style="display:none;">Zavřít</button>
+        </section>
+
+        
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
