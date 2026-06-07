@@ -1,7 +1,14 @@
 var SUPABASE_URL = "https://ywqmdrxfxxlwasazzspq.supabase.co/";
 var SUPABASE_KEY = "sb_publishable_WcWoJe5OCaLs1q77QXxC0A_5sSLTHA_";
 
+//check if logged in
+var sessionData = JSON.parse(localStorage.getItem("session"));
+if (!sessionData) {
+    window.location.href = "login.html";
+}
 
+//use token from sess
+var AUTH_TOKEN = sessionData ? sessionData.access_token : SUPABASE_KEY;
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -37,7 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
     var searchResultClose = document.getElementById("session-search-result-close");
     var searchResultDesc = document.getElementById("session-search-result-desc");
 
+    //logout gets
+    var logoutBtn = document.getElementById("logout-btn");
 
+    //logout
+    logoutBtn.addEventListener("click", function() {
+        localStorage.removeItem("session");
+        window.location.href = "login.html";
+    });
     //new sess btn
     newSessionBtn.addEventListener("click", function() {
         var dnes = new Date().toLocaleDateString("cs-CZ");
@@ -82,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
             method:"POST",
             headers:{
                 "apikey": SUPABASE_KEY,
-                "Authorization": "Bearer " + SUPABASE_KEY,
+                "Authorization": "Bearer " + AUTH_TOKEN,
                 "Content-Type": "application/json",
                 "Prefer": "return=representation"
             },
@@ -109,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 method: "POST",
                 headers: {
                     "apikey": SUPABASE_KEY,
-                    "Authorization": "Bearer " + SUPABASE_KEY,
+                    "Authorization": "Bearer " + AUTH_TOKEN,
                     "Content-Type": "application/json",
                     "Prefer": "return=minimal"
                     },
@@ -138,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
             method: "GET",
             headers: {
                 "apikey": SUPABASE_KEY,
-                "Authorization": "Bearer " + SUPABASE_KEY
+                "Authorization": "Bearer " + AUTH_TOKEN
             }
         })
         .then(function(response) {
@@ -171,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     method: "DELETE",
                     headers: {
                         "apikey": SUPABASE_KEY,
-                        "Authorisation": "Bearer " + SUPABASE_KEY
+                        "Authorization": "Bearer " + AUTH_TOKEN
                     }
                 })
                 .then(function(response){
@@ -196,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
             method: "POST",
             headers:{
                 "apikey": SUPABASE_KEY,
-                "Authorization": "Bearer " + SUPABASE_KEY,
+                "Authorization": "Bearer " + AUTH_TOKEN,
                 "Content-Type": "application/json",
                 "Prefer": "return=minimal"
             },
@@ -224,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function() {
             method: "GET",
             headers:{
                 "apikey": SUPABASE_KEY,
-                "Authorization": "Bearer " + SUPABASE_KEY
+                "Authorization": "Bearer " + AUTH_TOKEN
             }
         })
         .then(function(response){
@@ -242,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 method: "GET",
                 headers:{
                     "apikey": SUPABASE_KEY,
-                    "Authorization": "Bearer " + SUPABASE_KEY
+                    "Authorization": "Bearer " + AUTH_TOKEN
                 }
             })
             .then(function(response){
@@ -251,6 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(function(attendance){
                 searchResultInfo.textContent = "Lekce: " + session.date;
                 searchResultDesc.value = session.desc;
+                searchResultSection.setAttribute("data-session-id", session.id);
                 searchResultSection.style.display = "block";
                 searchResultBody.innerHTML = "";
 
@@ -280,11 +295,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             })
 
-        })
+        });
 
             
 
-        }
+        
     });
 
     //closes loaded sess
@@ -295,32 +310,90 @@ document.addEventListener("DOMContentLoaded", function() {
         sessionDate.value = "";
     });
     searchResultDelete.addEventListener("click", function(){
-        var formated = new Date(sessionDate.value).toLocaleDateString("cs-CZ");
-        localStorage.removeItem("Lekce-" + formated);
-        searchResultSection.style.display = "none";
-        searchResultBody.innerHTML = "";
-        searchResultInfo.textContent = "";
-        sessionDate.value = "";
-        alert("Lekce smazána")
+        var sessionId = searchResultSection.getAttribute("data-session-id");
+
+        fetch(SUPABASE_URL + "rest/v1/attendance?session_id=eq." + sessionId,{
+            method: "DELETE",
+            headers: {
+                "apikey": SUPABASE_KEY,
+                "Authorization": "Bearer " + AUTH_TOKEN
+            }
+        })
+        .then(function(response){
+            return fetch(SUPABASE_URL + "rest/v1/sessions?id=eq." + sessionId,{
+                method: "DELETE",
+                headers: {
+                    "apikey": SUPABASE_KEY,
+                    "Authorization": "Bearer " + AUTH_TOKEN
+                }
+            });
+        })
+        .then(function(response){
+            searchResultSection.style.display = "none";
+            searchResultBody.innerHTML = "";
+            searchResultInfo.textContent = "";
+            sessionDate.value = "";
+             alert("lekce smazána");
+        });
     });
 
     //saves changes made
     searchResultSave.addEventListener("click", function(){
-        var formated = new Date(sessionDate.value).toLocaleDateString("cs-CZ");
+        var sessionId = searchResultSection.getAttribute("data-session-id");
         var checkboxes = searchResultBody.querySelectorAll("input[type='checkbox']");
-        var attendance = {};
 
-        for(var i = 0; i < checkboxes.length; i++){
-            var name = checkboxes[i].getAttribute("data-student");
-            attendance[name] = checkboxes[i].checked;
-        }
+        //delete old attendace
+        fetch(SUPABASE_URL + "rest/v1/attendance?session_id=eq." + sessionId,{
+            method: "DELETE",
+            headers: {
+                "apikey": SUPABASE_KEY,
+                "Authorization": "Bearer " + AUTH_TOKEN
+            }
+        })
+        .then(function(response){
+            var records = [];
 
-        var session = {
-            desc: searchResultDesc.value,
-            attendance: attendance
-        };
-
-        localStorage.setItem("Lekce-" + formated, JSON.stringify(session));
-        alert("změny uloženy");
+            //new attendance record
+            for(var i = 0; i < checkboxes.length; i++){
+                var name = checkboxes[i].getAttribute("data-student");
+                var student = students.find(function(s){ return s.name === name;});
+                records.push({
+                    session_id: sessionId,
+                    student_id: student.id,
+                    present: checkboxes[i].checked
+                });
+            }
+            //saves new attendance
+            return fetch(SUPABASE_URL + "rest/v1/attendance",{
+                method: "POST",
+                headers: {
+                    "apikey": SUPABASE_KEY,
+                    "Authorization": "Bearer " + AUTH_TOKEN,
+                    "Content-Type": "application/json",
+                    "Prefer": "return=minimal"
+                },
+                body: JSON.stringify(records)
+            });
+        })
+        //Update sess desc
+        .then(function(response){
+            return fetch(SUPABASE_URL + "rest/v1/sessions?id=eq." + sessionId,{
+                method: "PATCH",
+                headers: {
+                    "apikey": SUPABASE_KEY,
+                    "Authorization": "Bearer " + AUTH_TOKEN,
+                    "Content-Type": "application/json",
+                    "Prefer": "return=minimal"
+                },
+                body: JSON.stringify({desc: searchResultDesc.value})
+            });
+        })
+        .then(function(response){
+            alert("změny uloženy");
+        });
     });
 });
+//sw register
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}

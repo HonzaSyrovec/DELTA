@@ -11,7 +11,28 @@
     --danger: #e05252;
     --success: #4caf82;
 }
+header {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logout-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
 
+#logout-btn:hover {
+    background-color: var(--danger);
+    border-color: var(--danger);
+    color: white;
+}
 * {
     margin: 0;
     padding: 0;
@@ -24,12 +45,6 @@ body {
     color: var(--text);
     min-height: 100vh;
     padding: 2rem;
-}
-header {
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
 }
 
 h1 {
@@ -61,6 +76,8 @@ section {
     border-radius: 12px;
     padding: 1.5rem;
 }
+
+/* BUTTONS */
 button {
     padding: 0.6rem 1.2rem;
     border: none;
@@ -76,21 +93,6 @@ button {
 
 button:hover {
     background-color: var(--accent-hover);
-}
-li button {
-    padding: 0.15rem 0.4rem;
-    font-size: 0.75rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 2px solid var(--border);
-    color: var(--text);
-    margin-left: 0.5rem;
-}
-
-li button:hover {
-    background-color: var(--danger);
-    border-color: var(--danger);
-    color: white;
 }
 
 #new-session-btn {
@@ -119,8 +121,11 @@ li button:hover {
 #session-search-result-delete:hover {
     background-color: #c0392b;
 }
+/* inouts; */
 input[type="text"],
-input[type="date"] {
+input[type="date"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 0.6rem 1rem;
     background-color: var(--bg);
@@ -134,14 +139,48 @@ input[type="date"] {
     transition: border-color 0.2s;
 }
 
-input[type="text"]:focus,
-input[type="date"]:focus {
-    border-color: var(--accent);
-}
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
+
+/* STUDENT LIST */
+ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-bottom: 0.5rem;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+li button {
+    padding: 0.15rem 0.4rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 2px solid var(--border);
+    color: var(--text);
+    margin-left: 0.5rem;
+}
+
+li button:hover {
+    background-color: var(--danger);
+    border-color: var(--danger);
+    color: white;
+}
+
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -178,42 +217,14 @@ input[type="checkbox"] {
     accent-color: var(--accent);
     cursor: pointer;
 }
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1rem;
-}
+/* login screen */
 
-th {
-    text-align: left;
-    padding: 0.6rem 1rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid var(--border);
+#login-error {
+    color: var(--danger);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
 }
-
-td {
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid var(--border);
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-tr:hover td {
-    background-color: var(--bg);
-}
-
-input[type="checkbox"] {
-    width: 1.1rem;
-    height: 1.1rem;
-    accent-color: var(--accent);
-    cursor: pointer;
-}
+/* responsive to phone */
 @media (max-width: 600px) {
     body {
         padding: 1rem;
