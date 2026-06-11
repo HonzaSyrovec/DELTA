@@ -9,7 +9,7 @@ INSERT INTO kategorie VALUES (5,'Sluchatka','Audio technika');
 INSERT INTO vyrobce VALUES (1,'Apple','USA',1976,'www.apple.com');
 INSERT INTO vyrobce VALUES (2,'Samsung','Jizni Korea',1938,'www.samsung.com');
 INSERT INTO vyrobce VALUES (3,'Lenovo','Cina',1984,'www.lenovo.com');
-INSERT INTO vyrobce VALUES (4,'Sony','Japonsko',1946,'www.sony.com');
+INSERT INTO vyrobce VALUES (4,'Sony','Japonsko',1946,'www.sony.com');bw
 INSERT INTO vyrobce VALUES (5,'LG','Jizni Korea',1958,'www.lg.com');
 INSERT INTO vyrobce VALUES (6,'Asus','Tchaj-wan',1989,'www.asus.com');
 INSERT INTO vyrobce VALUES (7,'Acer','Tchaj-wan',1976,'www.acer.com');

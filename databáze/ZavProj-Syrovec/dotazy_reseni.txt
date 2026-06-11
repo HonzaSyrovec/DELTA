@@ -191,10 +191,21 @@ FROM produkt;
 --------------------------------------------------------------------------------
 -- 20
 -- Přirozený dotaz:
--- Zjisti celkovou hodnotu všech objednávek.
+-- Vypiš pouze ty výrobce, kteří nabízejí alespoň 2 produkty
+-- a jejichž průměrná cena produktů je vyšší než 15000 Kč.
+-- Výsledky seřaď od nejvyšší průměrné ceny.
 
-SELECT SUM(celkova_cena)
-FROM objednavka;
+SELECT
+    v.nazev AS vyrobce,
+    COUNT(p.id_produkt) AS pocet_produktu,
+    ROUND(AVG(p.cena), 2) AS prumerna_cena
+FROM vyrobce v
+JOIN produkt p
+ON v.id_vyrobce = p.id_vyrobce
+GROUP BY v.nazev
+HAVING COUNT(p.id_produkt) >= 2
+   AND AVG(p.cena) > 15000
+ORDER BY prumerna_cena DESC;
 
 --------------------------------------------------------------------------------
 -- 21
@@ -232,15 +243,19 @@ WHERE cena >
 --------------------------------------------------------------------------------
 -- 24
 -- Přirozený dotaz:
--- Vypiš zaměstnance s nejvyšším platem.
+-- Vypiš všechny výrobce, počet jejich produktů, průměrnou cenu produktů
+-- a cenu jejich nejdražšího produktu. Výsledky seřaď podle počtu produktů.
 
-SELECT *
-FROM zamestnanec
-WHERE plat =
-(
-    SELECT MAX(plat)
-    FROM zamestnanec
-);
+SELECT
+    v.nazev AS vyrobce,
+    COUNT(p.id_produkt) AS pocet_produktu,
+    ROUND(AVG(p.cena), 2) AS prumerna_cena,
+    MAX(p.cena) AS nejdrazsi_produkt
+FROM vyrobce v
+JOIN produkt p
+ON v.id_vyrobce = p.id_vyrobce
+GROUP BY v.nazev
+ORDER BY pocet_produktu DESC;
 
 --------------------------------------------------------------------------------
 -- 25
@@ -299,7 +314,7 @@ FROM produkt;
 -- Přirozený dotaz:
 -- Vytvoř pohled zobrazující objednávky, zákazníky, produkty a objednaná množství.
 
-CREATE VIEW vw_objednavky AS
+CREATE OR REPLACE VIEW vw_objednavky AS
 SELECT
     o.id_objednavka,
     o.jmeno_zadavatele,
@@ -310,6 +325,8 @@ JOIN polozka_objednavky po
 ON o.id_objednavka = po.id_objednavka
 JOIN produkt pr
 ON po.id_produkt = pr.id_produkt;
+
+SELECT * FROM vw_objednavky
 
 --------------------------------------------------------------------------------
 -- 30

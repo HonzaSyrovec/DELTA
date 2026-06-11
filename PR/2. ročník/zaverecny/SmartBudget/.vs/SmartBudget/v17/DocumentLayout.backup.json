@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11EA0D57-C760-4D9D-B2DD-05E688017696}|SmartBudget.csproj|c:\\users\\jansy\\desktop\\delta projekty\\delta\\pr\\2. ro\u010Dn\u00EDk\\zaverecny\\smartbudget\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11EA0D57-C760-4D9D-B2DD-05E688017696}|SmartBudget.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11EA0D57-C760-4D9D-B2DD-05E688017696}|SmartBudget.csproj|c:\\users\\jansy\\desktop\\delta projekty\\delta\\pr\\2. ro\u010Dn\u00EDk\\zaverecny\\smartbudget\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11EA0D57-C760-4D9D-B2DD-05E688017696}|SmartBudget.csproj|solutionrelative:models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11EA0D57-C760-4D9D-B2DD-05E688017696}|SmartBudget.csproj|c:\\users\\jansy\\desktop\\delta projekty\\delta\\pr\\2. ro\u010Dn\u00EDk\\zaverecny\\smartbudget\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11EA0D57-C760-4D9D-B2DD-05E688017696}|SmartBudget.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11EA0D57-C760-4D9D-B2DD-05E688017696}|SmartBudget.csproj|c:\\users\\jansy\\desktop\\delta projekty\\delta\\pr\\2. ro\u010Dn\u00EDk\\zaverecny\\smartbudget\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11EA0D57-C760-4D9D-B2DD-05E688017696}|SmartBudget.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T08:35:31.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "Models\\Transaction.cs",
+              "ToolTip": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\Models\\Transaction.cs",
+              "RelativeToolTip": "Models\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T08:34:57.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T08:34:39.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\JanSy\\Desktop\\DELTA PROJEKTY\\DELTA\\PR\\2. ro\u010Dn\u00EDk\\zaverecny\\SmartBudget\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T08:34:24.773Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
