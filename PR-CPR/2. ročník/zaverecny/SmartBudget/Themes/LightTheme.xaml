@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Pozadí -->
+    <SolidColorBrush x:Key="WindowBackground" Color="#F5F5F5"/>
+    <SolidColorBrush x:Key="CardBackground" Color="White"/>
+    <SolidColorBrush x:Key="NavbarBackground" Color="#2C3E50"/>
+    <SolidColorBrush x:Key="LeftPanelBackground" Color="#EBF5FB"/>
+    <SolidColorBrush x:Key="RightPanelBackground" Color="#FDEDEC"/>
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="PrimaryText" Color="#2C3E50"/>
+    <SolidColorBrush x:Key="SecondaryText" Color="#7F8C8D"/>
+    <SolidColorBrush x:Key="NavbarText" Color="White"/>
+    <SolidColorBrush x:Key="NavbarSubText" Color="#BDC3C7"/>
+
+    <!-- Prvky -->
+    <SolidColorBrush x:Key="BorderColor" Color="#BDC3C7"/>
+    <SolidColorBrush x:Key="SeparatorColor" Color="#ECF0F1"/>
+    <SolidColorBrush x:Key="InputBackground" Color="White"/>
+
+    <!-- Akční barvy -->
+    <SolidColorBrush x:Key="IncomeColor" Color="#27AE60"/>
+    <SolidColorBrush x:Key="ExpenseColor" Color="#E74C3C"/>
+    <SolidColorBrush x:Key="AccentBlue" Color="#3498DB"/>
+    <SolidColorBrush x:Key="AccentGreen" Color="#2ECC71"/>
+
+</ResourceDictionary>

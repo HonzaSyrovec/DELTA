@@ -1,0 +1,60 @@
+﻿<Window x:Class="SmartBudget.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SmartBudget – Přihlášení"
+        Height="380" Width="420"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Background="{DynamicResource WindowBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="{DynamicResource NavbarBackground}">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="SmartBudget" Foreground="{DynamicResource NavbarText}"
+                           FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Text="Správa osobních financí"
+                           Foreground="{DynamicResource NavbarSubText}"
+                           FontSize="11" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Row="1" Width="300" VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <TextBlock Text="Uživatelské jméno" Margin="0,0,0,4"
+                       Foreground="{DynamicResource PrimaryText}" FontSize="12"/>
+            <TextBox x:Name="UsernameBox"
+                     Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                     Height="36" Padding="10,0" FontSize="13"
+                     BorderBrush="{DynamicResource BorderColor}" BorderThickness="1"
+                     Background="{DynamicResource InputBackground}"
+                     Foreground="{DynamicResource PrimaryText}"/>
+
+            <TextBlock Text="Heslo" Margin="0,12,0,4"
+                       Foreground="{DynamicResource PrimaryText}" FontSize="12"/>
+            <PasswordBox x:Name="PasswordBox"
+                         Height="36" Padding="10,0" FontSize="13"
+                         BorderBrush="{DynamicResource BorderColor}" BorderThickness="1"
+                         Background="{DynamicResource InputBackground}"/>
+
+            <TextBlock Text="{Binding ErrorMessage}"
+                       Foreground="{DynamicResource ExpenseColor}"
+                       Margin="0,8,0,0" FontSize="12" TextWrapping="Wrap"/>
+
+            <Button Content="Přihlásit se" Height="40" Margin="0,16,0,0"
+                    Background="{DynamicResource AccentGreen}" Foreground="White"
+                    FontSize="13" FontWeight="Bold" BorderThickness="0"
+                    Click="LoginButton_Click"/>
+
+            <Button Content="Nemám účet – Registrovat se" Height="34"
+                    Margin="0,6,0,0" Background="Transparent"
+                    Foreground="{DynamicResource AccentBlue}"
+                    FontSize="12" BorderThickness="0"
+                    Command="{Binding NavigateToRegisterCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>
