@@ -9,6 +9,14 @@ public class WithdrawTransferService {
     private static final double BUSINESS_ACCOUNT_SERVICE_FEE = 0.01;
 
     public void withdraw(BankAccount account, double amount) {
+        if (account == null) {
+            throw new IllegalArgumentException("Account cannot be null");
+        }
+
+        if (Double.isNaN(amount) || Double.isInfinite(amount) || amount <= 0) {
+            throw new IllegalArgumentException("Amount must be a positive number");
+        }
+
         double newBalance = account.getBalance() - amount;
 
         if (account instanceof BusinessAccount) {
@@ -17,14 +25,14 @@ public class WithdrawTransferService {
             newBalance -= serviceFee;
         }
 
-        if (newBalance < getWithDrawLimit(account)) {
-            throw new IllegalArgumentException("Cannot subtract negative amount");
+        if (newBalance < getWithdrawLimit(account)) {
+            throw new IllegalArgumentException("Not enough funds on account");
         }
 
         account.setBalance(newBalance);
     }
 
-    private int getWithDrawLimit(BankAccount account) {
+    private int getWithdrawLimit(BankAccount account) {
         if (account instanceof StudentAccount) {
             return -5000;
         }

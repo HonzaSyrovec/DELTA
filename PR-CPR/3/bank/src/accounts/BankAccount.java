@@ -1,6 +1,6 @@
 package accounts;
 
-// 2010
+
 
 import notifier.ConsoleNotifierService;
 import notifier.EmailNotifierService;
@@ -9,7 +9,6 @@ import person.AccountOwner;
 
 import java.util.UUID;
 
-// 2102405518
 public abstract class BankAccount {
 
     private String uuid;
@@ -41,5 +40,9 @@ public abstract class BankAccount {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
     }
 }
