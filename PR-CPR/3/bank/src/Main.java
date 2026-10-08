@@ -1,8 +1,13 @@
 import accounts.*;
 import person.AccountOwner;
+import person.AccountOwnerFactory;
 import transfer.DepositTransferService;
 import transfer.WithdrawTransferService;
 import transfer.TransferService;
+import generator.AccountNumberGenerator;
+import generator.SequentialAccountNumberGenerator;
+import transaction.TransactionFactory;
+import transfer.TransferLoggerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +16,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        AccountOwner accountOwner = new AccountOwner("jozef", "svoboda");
-        accountOwner.setLastName("novak");
+        AccountOwnerFactory accountOwnerFactory = new AccountOwnerFactory();
 
-        BankAccount bankAccount = new CurrentAccount(accountOwner, "1234", 500);
-        BankAccount studentAccount = new StudentAccount(accountOwner, "1234", 500, "Delta");
-        BankAccount savingAccount = new SavingAccount(accountOwner, "1234");
+        AccountOwner accountOwner = accountOwnerFactory.createAccountOwner("jozef", "novak");
+        AccountNumberGenerator accountNumberGenerator = new SequentialAccountNumberGenerator();
+        BankAccountFactory bankAccountFactory = new BankAccountFactory(accountNumberGenerator);
+
+        BankAccount bankAccount = bankAccountFactory.createCurrentAccount(accountOwner, 500);
+        BankAccount studentAccount = bankAccountFactory.createStudentAccount(accountOwner, 500, "Delta");
+        BankAccount savingAccount = bankAccountFactory.createSavingAccount(accountOwner);
 
 
         List<BankAccount> bankAccounts = new ArrayList<>();
@@ -44,7 +52,10 @@ public class Main {
 
         printBalance(bankAccount);
 
-        DepositTransferService depositTransferService = new DepositTransferService();
+        TransactionFactory transactionFactory = new TransactionFactory();
+        TransferLoggerService transferLoggerService = new TransferLoggerService();
+
+        DepositTransferService depositTransferService = new DepositTransferService(transactionFactory, transferLoggerService);
         depositTransferService.deposit(bankAccount, 400);
         depositTransferService.deposit(bankAccount, 100);
         depositTransferService.deposit(bankAccount, 200);
@@ -52,7 +63,7 @@ public class Main {
 
         printBalance(bankAccount);
 
-        WithdrawTransferService withdrawTransferService = new WithdrawTransferService();
+        WithdrawTransferService withdrawTransferService = new WithdrawTransferService(transactionFactory, transferLoggerService);
 
         withdrawTransferService.withdraw(bankAccount, 300);
         withdrawTransferService.withdraw(bankAccount, 300);
@@ -63,10 +74,9 @@ public class Main {
 
         printBalance(bankAccount);
 
-        BankAccount businessAccount = new BusinessAccount(accountOwner, "456");
-        businessAccount.setBalance(5000);
+        BankAccount businessAccount = bankAccountFactory.createBusinessAccount(accountOwner, 5000);
 
-        TransferService transferService = new TransferService();
+        TransferService transferService = new TransferService(transactionFactory, transferLoggerService);
 
         // business -> current, fee 0.3 %
         transferService.transfer(businessAccount, bankAccount, 1000);
@@ -96,6 +106,9 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println("error: " + e.getMessage());
         }
+
+        System.out.println("--- history ---");
+        transferLoggerService.printHistory();
     }
 
     private static void printBalance(BankAccount bankAccount) {

@@ -2,10 +2,25 @@ package transfer;
 
 import accounts.BankAccount;
 import accounts.StudentAccount;
+import transaction.Transaction;
+import transaction.TransactionFactory;
 
 public class DepositTransferService {
 
     private static final double STUDENT_ACCOUNT_DEPOSIT_BONUS = 0.005;
+
+    private final TransactionFactory transactionFactory;
+
+    private final TransferLoggerService transferLoggerService;
+
+    public DepositTransferService(TransactionFactory transactionFactory, TransferLoggerService transferLoggerService) {
+        if (transactionFactory == null || transferLoggerService == null) {
+            throw new IllegalArgumentException("Dependencies cannot be null");
+        }
+
+        this.transactionFactory = transactionFactory;
+        this.transferLoggerService = transferLoggerService;
+    }
 
     public void deposit(BankAccount bankAccount, double amount) {
         if (bankAccount == null) {
@@ -24,7 +39,11 @@ public class DepositTransferService {
             newBalance += depositBonus;
         }
 
+        Transaction transaction = transactionFactory.createDeposit(bankAccount.getAccountNumber(), amount);
+
         bankAccount.setBalance(newBalance);
+
+        transferLoggerService.log(transaction);
     }
 
 }

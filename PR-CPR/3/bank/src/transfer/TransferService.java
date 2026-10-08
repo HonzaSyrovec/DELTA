@@ -2,18 +2,34 @@ package transfer;
 
 import accounts.BankAccount;
 import accounts.BusinessAccount;
+import transaction.Transaction;
+import transaction.TransactionFactory;
 
 public class TransferService {
 
     private static final double BUSINESS_ACCOUNT_TRANSFER_FEE = 0.003;
 
+    private final TransactionFactory transactionFactory;
+
+    private final TransferLoggerService transferLoggerService;
+
+    public TransferService(TransactionFactory transactionFactory, TransferLoggerService transferLoggerService) {
+        if (transactionFactory == null || transferLoggerService == null) {
+            throw new IllegalArgumentException("Dependencies cannot be null");
+        }
+
+        this.transactionFactory = transactionFactory;
+        this.transferLoggerService = transferLoggerService;
+    }
+
     public void transfer(BankAccount from, BankAccount to, double amount) {
         validate(from, to, amount);
 
         double totalAmount = amount;
+        double transferFee = 0;
 
         if (from instanceof BusinessAccount) {
-            double transferFee = amount * BUSINESS_ACCOUNT_TRANSFER_FEE;
+            transferFee = amount * BUSINESS_ACCOUNT_TRANSFER_FEE;
 
             totalAmount += transferFee;
         }
@@ -22,8 +38,17 @@ public class TransferService {
             throw new IllegalArgumentException("Not enough funds on source account");
         }
 
+        Transaction transaction = transactionFactory.createTransfer(
+                from.getAccountNumber(),
+                to.getAccountNumber(),
+                amount,
+                transferFee
+        );
+
         from.setBalance(from.getBalance() - totalAmount);
         to.setBalance(to.getBalance() + amount);
+
+        transferLoggerService.log(transaction);
     }
 
     private void validate(BankAccount from, BankAccount to, double amount) {

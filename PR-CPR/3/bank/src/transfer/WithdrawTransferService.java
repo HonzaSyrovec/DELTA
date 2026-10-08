@@ -3,10 +3,25 @@ package transfer;
 import accounts.BankAccount;
 import accounts.BusinessAccount;
 import accounts.StudentAccount;
+import transaction.Transaction;
+import transaction.TransactionFactory;
 
 public class WithdrawTransferService {
 
     private static final double BUSINESS_ACCOUNT_SERVICE_FEE = 0.01;
+
+    private final TransactionFactory transactionFactory;
+
+    private final TransferLoggerService transferLoggerService;
+
+    public WithdrawTransferService(TransactionFactory transactionFactory, TransferLoggerService transferLoggerService) {
+        if (transactionFactory == null || transferLoggerService == null) {
+            throw new IllegalArgumentException("Dependencies cannot be null");
+        }
+
+        this.transactionFactory = transactionFactory;
+        this.transferLoggerService = transferLoggerService;
+    }
 
     public void withdraw(BankAccount account, double amount) {
         if (account == null) {
@@ -18,9 +33,10 @@ public class WithdrawTransferService {
         }
 
         double newBalance = account.getBalance() - amount;
+        double serviceFee = 0;
 
         if (account instanceof BusinessAccount) {
-            double serviceFee = amount * BUSINESS_ACCOUNT_SERVICE_FEE;
+            serviceFee = amount * BUSINESS_ACCOUNT_SERVICE_FEE;
 
             newBalance -= serviceFee;
         }
@@ -29,7 +45,11 @@ public class WithdrawTransferService {
             throw new IllegalArgumentException("Not enough funds on account");
         }
 
+        Transaction transaction = transactionFactory.createWithdraw(account.getAccountNumber(), amount, serviceFee);
+
         account.setBalance(newBalance);
+
+        transferLoggerService.log(transaction);
     }
 
     private int getWithdrawLimit(BankAccount account) {
