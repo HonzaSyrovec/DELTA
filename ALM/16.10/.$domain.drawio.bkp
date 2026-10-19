@@ -1,0 +1,208 @@
+<mxfile host="Electron">
+  <diagram name="Doménový model" id="domenovy-model">
+    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="osoba" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Osoba" vertex="1">
+          <mxGeometry height="92" width="170" x="520" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="osoba_a" parent="osoba" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="jméno&#xa;příjmení&#xa;email" vertex="1">
+          <mxGeometry height="66" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nav" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Návštěvník" vertex="1">
+          <mxGeometry height="52" width="170" x="240" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_a" parent="nav" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="datumNarození" vertex="1">
+          <mxGeometry height="26" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="brig" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Brigádník" vertex="1">
+          <mxGeometry height="52" width="170" x="520" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="brig_a" parent="brig" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="telefon" vertex="1">
+          <mxGeometry height="26" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ost" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Člen ostrahy" vertex="1">
+          <mxGeometry height="52" width="170" x="760" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="ost_a" parent="ost" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="identifikačníČíslo" vertex="1">
+          <mxGeometry height="26" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="rez" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Rezervace" vertex="1">
+          <mxGeometry height="92" width="170" x="10" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="rez_a" parent="rez" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="čísloMísta&#xa;datumOd&#xa;datumDo" vertex="1">
+          <mxGeometry height="66" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vst" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Vstupenka" vertex="1">
+          <mxGeometry height="92" width="170" x="240" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="vst_a" parent="vst" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="kód&#xa;cena&#xa;typ" vertex="1">
+          <mxGeometry height="66" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="smena" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Směna" vertex="1">
+          <mxGeometry height="92" width="170" x="520" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="smena_a" parent="smena" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="začátek&#xa;konec&#xa;pozice" vertex="1">
+          <mxGeometry height="66" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="inc" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Incident" vertex="1">
+          <mxGeometry height="92" width="170" x="760" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_a" parent="inc" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="čas&#xa;popis&#xa;závažnost" vertex="1">
+          <mxGeometry height="66" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="fest" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Festival" vertex="1">
+          <mxGeometry height="112" width="170" x="240" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="fest_a" parent="fest" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="název&#xa;datumOd&#xa;datumDo&#xa;místo" vertex="1">
+          <mxGeometry height="86" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="stage" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Stage" vertex="1">
+          <mxGeometry height="72" width="170" x="520" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="stage_a" parent="stage" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="název&#xa;kapacita" vertex="1">
+          <mxGeometry height="46" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vyst" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Vystoupení" vertex="1">
+          <mxGeometry height="72" width="170" x="760" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="vyst_a" parent="vyst" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="začátek&#xa;konec" vertex="1">
+          <mxGeometry height="46" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="uc" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Účinkující" vertex="1">
+          <mxGeometry height="92" width="170" x="1030" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_a" parent="uc" style="text;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="jméno&#xa;žánr&#xa;kontakt" vertex="1">
+          <mxGeometry height="66" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g0" edge="1" parent="1" source="nav" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;" target="osoba">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" edge="1" parent="1" source="brig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;" target="osoba">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" edge="1" parent="1" source="ost" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;" target="osoba">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="nav" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="rez" value="vytváří">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1s" connectable="0" parent="e1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1t" connectable="0" parent="e1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="nav" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="vst" value="vlastní">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2s" connectable="0" parent="e2" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2t" connectable="0" parent="e2" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="fest" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="vst" value="prodává">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3s" connectable="0" parent="e3" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3t" connectable="0" parent="e3" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="fest" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="stage" value="má">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4s" connectable="0" parent="e4" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4t" connectable="0" parent="e4" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="brig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="smena" value="má">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5s" connectable="0" parent="e5" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5t" connectable="0" parent="e5" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="smena" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="stage" value="probíhá na">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6s" connectable="0" parent="e6" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6t" connectable="0" parent="e6" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="stage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="vyst" value="hostí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7s" connectable="0" parent="e7" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7t" connectable="0" parent="e7" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="uc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="vyst" value="vystupuje ve">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8s" connectable="0" parent="e8" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8t" connectable="0" parent="e8" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="ost" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="inc" value="zaznamenává">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9s" connectable="0" parent="e9" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9t" connectable="0" parent="e9" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

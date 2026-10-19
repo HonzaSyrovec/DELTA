@@ -1,0 +1,280 @@
+<mxfile host="Electron">
+  <diagram name="Class diagram" id="class-diagram">
+    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="person" parent="1" style="swimlane;fontStyle=3;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Osoba" vertex="1">
+          <mxGeometry height="142" width="290" x="760" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="person_a" parent="person" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- jméno: String&#xa;- příjmení: String&#xa;# email: String" vertex="1">
+          <mxGeometry height="64" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="person_l" parent="person" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="person_m" parent="person" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ getCeléJméno(): String&#xa;+ změnitEmail(email: String): void" vertex="1">
+          <mxGeometry height="44" width="290" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="visitor" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Návštěvník" vertex="1">
+          <mxGeometry height="122" width="290" x="390" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="visitor_a" parent="visitor" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- datumNarození: LocalDate" vertex="1">
+          <mxGeometry height="24" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="visitor_l" parent="visitor" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="visitor_m" parent="visitor" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ koupitVstupenku(typ: String): Vstupenka&#xa;+ rezervovatKemp(místo: int): Rezervace&#xa;+ prohlédnoutProgram(): List&lt;Vystoupení&gt;" vertex="1">
+          <mxGeometry height="64" width="290" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="worker" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Brigádník" vertex="1">
+          <mxGeometry height="102" width="290" x="760" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="worker_a" parent="worker" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- telefon: String" vertex="1">
+          <mxGeometry height="24" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="worker_l" parent="worker" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="worker_m" parent="worker" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ zobrazitSměny(): List&lt;Směna&gt;&#xa;+ potvrditSměnu(směna: Směna): void" vertex="1">
+          <mxGeometry height="44" width="290" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="guard" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="ČlenOstrahy" vertex="1">
+          <mxGeometry height="102" width="290" x="1130" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="guard_a" parent="guard" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- čísloPrůkazu: String" vertex="1">
+          <mxGeometry height="24" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="guard_l" parent="guard" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="guard_m" parent="guard" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ zaznamenatIncident(popis: String): Incident&#xa;+ zkontrolovatVstupenku(kód: String): boolean" vertex="1">
+          <mxGeometry height="44" width="290" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="res" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Rezervace" vertex="1">
+          <mxGeometry height="142" width="290" x="20" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="res_a" parent="res" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- čísloMísta: int&#xa;- datumOd: LocalDate&#xa;- datumDo: LocalDate" vertex="1">
+          <mxGeometry height="64" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="res_l" parent="res" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="res_m" parent="res" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ zrušit(): void&#xa;+ getPočetNocí(): int" vertex="1">
+          <mxGeometry height="44" width="290" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Vstupenka" vertex="1">
+          <mxGeometry height="162" width="290" x="390" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket_a" parent="ticket" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- kód: String&#xa;- cena: double&#xa;- typ: String&#xa;- použitá: boolean" vertex="1">
+          <mxGeometry height="84" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket_l" parent="ticket" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket_m" parent="ticket" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ ověřit(): boolean&#xa;+ označitJakoPoužitou(): void" vertex="1">
+          <mxGeometry height="44" width="290" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="shift" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Směna" vertex="1">
+          <mxGeometry height="122" width="290" x="760" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="shift_a" parent="shift" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- začátek: LocalDateTime&#xa;- konec: LocalDateTime&#xa;- pozice: String" vertex="1">
+          <mxGeometry height="64" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="shift_l" parent="shift" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="shift_m" parent="shift" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ přiřadit(brigádník: Brigádník): void" vertex="1">
+          <mxGeometry height="24" width="290" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="inc" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Incident" vertex="1">
+          <mxGeometry height="122" width="290" x="1130" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_a" parent="inc" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- čas: LocalDateTime&#xa;- popis: String&#xa;- závažnost: int" vertex="1">
+          <mxGeometry height="64" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_l" parent="inc" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_m" parent="inc" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ getShrnutí(): String" vertex="1">
+          <mxGeometry height="24" width="290" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="fest" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Festival" vertex="1">
+          <mxGeometry height="182" width="290" x="390" y="716" as="geometry" />
+        </mxCell>
+        <mxCell id="fest_a" parent="fest" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- název: String&#xa;- datumOd: LocalDate&#xa;- datumDo: LocalDate&#xa;- místo: String" vertex="1">
+          <mxGeometry height="84" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="fest_l" parent="fest" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fest_m" parent="fest" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ přidatStage(stage: Stage): void&#xa;+ zveřejnitProgram(): void&#xa;+ getPočetProdanýchVstupenek(): int" vertex="1">
+          <mxGeometry height="64" width="290" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="stage" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Stage" vertex="1">
+          <mxGeometry height="122" width="290" x="760" y="716" as="geometry" />
+        </mxCell>
+        <mxCell id="stage_a" parent="stage" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- název: String&#xa;- kapacita: int" vertex="1">
+          <mxGeometry height="44" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="stage_l" parent="stage" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="stage_m" parent="stage" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ přidatVystoupení(v: Vystoupení): void&#xa;+ getProgram(): List&lt;Vystoupení&gt;" vertex="1">
+          <mxGeometry height="44" width="290" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="perf" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Vystoupení" vertex="1">
+          <mxGeometry height="102" width="290" x="1130" y="716" as="geometry" />
+        </mxCell>
+        <mxCell id="perf_a" parent="perf" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- začátek: LocalDateTime&#xa;- konec: LocalDateTime" vertex="1">
+          <mxGeometry height="44" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="perf_l" parent="perf" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="perf_m" parent="perf" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ posunout(minuty: int): void" vertex="1">
+          <mxGeometry height="24" width="290" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="artist" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;" value="Účinkující" vertex="1">
+          <mxGeometry height="122" width="290" x="1500" y="716" as="geometry" />
+        </mxCell>
+        <mxCell id="artist_a" parent="artist" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="- jméno: String&#xa;- žánr: String&#xa;- kontakt: String" vertex="1">
+          <mxGeometry height="64" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="artist_l" parent="artist" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="artist_m" parent="artist" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;overflow=hidden;rotatable=0;whiteSpace=wrap;html=0;" value="+ getVystoupení(): List&lt;Vystoupení&gt;" vertex="1">
+          <mxGeometry height="24" width="290" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="g0" edge="1" parent="1" source="visitor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="person">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" edge="1" parent="1" source="worker" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="person">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" edge="1" parent="1" source="guard" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="person">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="visitor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="res" value="vytváří">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1s" connectable="0" parent="e1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1t" connectable="0" parent="e1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="visitor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="ticket" value="vlastní">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2s" connectable="0" parent="e2" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint x="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2t" connectable="0" parent="e2" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint x="5" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="fest" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="ticket" value="prodává">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3s" connectable="0" parent="e3" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint x="5" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3t" connectable="0" parent="e3" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint x="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="fest" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=diamond;startFill=1;startSize=14;" target="stage" value="má">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4s" connectable="0" parent="e4" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4t" connectable="0" parent="e4" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=top;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="worker" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="shift" value="má">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5s" connectable="0" parent="e5" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint x="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5t" connectable="0" parent="e5" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint x="5" y="-23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="shift" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="stage" value="probíhá na">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6s" connectable="0" parent="e6" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint x="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6t" connectable="0" parent="e6" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint x="14" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="stage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="perf" value="hostí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7s" connectable="0" parent="e7" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7t" connectable="0" parent="e7" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="artist" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="perf" value="hraje ve">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8s" connectable="0" parent="e8" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8t" connectable="0" parent="e8" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint x="1" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="guard" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;" target="inc" value="zaznamenává">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9s" connectable="0" parent="e9" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint x="14" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9t" connectable="0" parent="e9" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint x="5" y="-23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
