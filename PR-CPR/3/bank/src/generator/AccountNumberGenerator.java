@@ -4,4 +4,4 @@ public interface AccountNumberGenerator {
 
     String generate();
 
-}
+}

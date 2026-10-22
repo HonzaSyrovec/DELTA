@@ -31,4 +31,4 @@ public class AccountOwner {
     public String getLastName() {
         return lastName;
     }
-}
+}

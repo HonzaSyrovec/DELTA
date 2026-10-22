@@ -1,44 +1,61 @@
 import accounts.*;
-import person.AccountOwner;
-import person.AccountOwnerFactory;
-import transfer.DepositTransferService;
-import transfer.WithdrawTransferService;
-import transfer.TransferService;
+import accounts.factories.BankAccountFactory;
+import accounts.serialization.BankAccountGsonSerializer;
+import accounts.serialization.BankAccountSerializer;
+import accounts.serialization.BankAccountXMLSerializer;
+import accounts.services.BankAccountService;
 import generator.AccountNumberGenerator;
 import generator.SequentialAccountNumberGenerator;
+import person.AccountOwner;
+import person.services.AccountOwnerService;
 import transaction.TransactionFactory;
+import transfer.DepositTransferService;
 import transfer.TransferLoggerService;
-
-import java.util.ArrayList;
-import java.util.List;
+import transfer.TransferService;
+import transfer.WithdrawTransferService;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        AccountOwnerFactory accountOwnerFactory = new AccountOwnerFactory();
+        AccountOwnerService accountOwnerService = new AccountOwnerService();
 
-        AccountOwner accountOwner = accountOwnerFactory.createAccountOwner("jozef", "novak");
         AccountNumberGenerator accountNumberGenerator = new SequentialAccountNumberGenerator();
         BankAccountFactory bankAccountFactory = new BankAccountFactory(accountNumberGenerator);
+        BankAccountService bankAccountService = new BankAccountService(bankAccountFactory);
 
-        BankAccount bankAccount = bankAccountFactory.createCurrentAccount(accountOwner, 500);
-        BankAccount studentAccount = bankAccountFactory.createStudentAccount(accountOwner, 500, "Delta");
-        BankAccount savingAccount = bankAccountFactory.createSavingAccount(accountOwner);
+        AccountOwner accountOwner = accountOwnerService.createAccountOwner("jozef", "novak");
+
+        BankAccount bankAccount = bankAccountService.createCurrentBankAccount(accountOwner, 500);
+        BankAccount studentAccount = bankAccountService.createStudentBankAccount(accountOwner, 500, "Delta");
+        BankAccount savingAccount = bankAccountService.createSavingBankAccount(accountOwner, 500);
+        BankAccount businessAccount = bankAccountService.createBusinessBankAccount(accountOwner, 5000);
+
+        BankAccountSerializer bankAccountJsonSerializer = new BankAccountGsonSerializer();
+        BankAccountSerializer bankAccountXmlSerializer = new BankAccountXMLSerializer();
 
 
-        List<BankAccount> bankAccounts = new ArrayList<>();
-        bankAccounts.add(bankAccount);
-        bankAccounts.add(studentAccount);
+
+        String bankAccountXml = bankAccountXmlSerializer.serialize(bankAccount);
+        String bankAccountXmlAll = bankAccountXmlSerializer.serializeAll(bankAccountService.getBankAccounts());
+
+        String bankAccountJson = bankAccountJsonSerializer.serialize(bankAccount);
+        String bankAccountJsonAll = bankAccountJsonSerializer.serializeAll(bankAccountService.getBankAccounts());
+
+        System.out.println(bankAccountXml);
+        System.out.println(bankAccountXmlAll);
+
+        System.out.println(bankAccountJson);
+        System.out.println(bankAccountJsonAll);
 
 
-        for (BankAccount account: bankAccounts){
+        for (BankAccount account : bankAccountService.getBankAccounts()) {
             if (account instanceof InterestPoint) {
-                ((InterestPoint)account).calculateInterest();
+                ((InterestPoint) account).calculateInterest();
             }
         }
 
-        for (BankAccount account: bankAccounts){
+        for (BankAccount account : bankAccountService.getBankAccounts()) {
 
             if (account instanceof StudentAccount) {
                 StudentAccount stdAccount = (StudentAccount) account;
@@ -73,8 +90,6 @@ public class Main {
         withdrawTransferService.withdraw(bankAccount, 400);
 
         printBalance(bankAccount);
-
-        BankAccount businessAccount = bankAccountFactory.createBusinessAccount(accountOwner, 5000);
 
         TransferService transferService = new TransferService(transactionFactory, transferLoggerService);
 

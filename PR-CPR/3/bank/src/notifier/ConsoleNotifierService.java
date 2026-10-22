@@ -6,4 +6,4 @@ public class ConsoleNotifierService implements NotifierService {
     public void notify(String message) {
         System.out.println("CONSOLE: " + message);
     }
-}
+}

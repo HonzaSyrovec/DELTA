@@ -32,4 +32,4 @@ public class TransferLoggerService {
             System.out.println(transaction);
         }
     }
-}
+}

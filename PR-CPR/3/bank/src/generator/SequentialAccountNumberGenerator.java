@@ -12,4 +12,4 @@ public class SequentialAccountNumberGenerator implements AccountNumberGenerator 
 
         return String.format("%010d", counter) + "/" + BANK_CODE;
     }
-}
+}
