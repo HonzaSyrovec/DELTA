@@ -30,7 +30,7 @@ public class App {
         System.out.println("========");
 
         System.out.println("WITH LOGGER");
-        BankAccount studentAccount = bankAccountWithLoggerService.createStudentBankAccount(accountOwner, 500, "Delta", Currency.CZK);
+        bankAccountWithLoggerService.createStudentBankAccount(accountOwner, 500, "Delta", Currency.CZK);
         System.out.println("========");
 
         System.out.println("WITH TIME LOGGER");
@@ -38,7 +38,7 @@ public class App {
         System.out.println("========");
 
         System.out.println("WITH LOGGER AND TIME LOGGER");
-        BankAccount businessAccount = bankAccountWithLoggerAndTimeLoggerService.createBusinessBankAccount(accountOwner, 500, Currency.USD);
+        bankAccountWithLoggerAndTimeLoggerService.createBusinessBankAccount(accountOwner, 500, Currency.USD);
         System.out.println("========");
 
         String bankAccountXml = container.bankAccountXmlSerializer.serialize(bankAccount);

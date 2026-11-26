@@ -4,7 +4,6 @@ import currency.MoneyFormatter;
 import transaction.Transaction;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class TransferLoggerService {
@@ -23,10 +22,6 @@ public class TransferLoggerService {
         }
 
         transactions.add(transaction);
-    }
-
-    public List<Transaction> getTransactions() {
-        return Collections.unmodifiableList(transactions);
     }
 
     public void printHistory() {

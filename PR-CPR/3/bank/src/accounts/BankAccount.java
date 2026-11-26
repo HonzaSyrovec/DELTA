@@ -1,12 +1,7 @@
 package accounts;
 
 import currency.Currency;
-import notifier.ConsoleNotifierService;
-import notifier.EmailNotifierService;
-import notifier.NotifierService;
 import person.AccountOwner;
-
-import java.util.UUID;
 
 public abstract class BankAccount {
 
@@ -19,8 +14,6 @@ public abstract class BankAccount {
     private double balance;
 
     private Currency currency = Currency.CZK;
-
-    private NotifierService notifierService = new ConsoleNotifierService();
 
     public BankAccount(AccountOwner accountOwner) {
         this.accountOwner = accountOwner;

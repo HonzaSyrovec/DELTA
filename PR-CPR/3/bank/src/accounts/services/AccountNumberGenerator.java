@@ -49,17 +49,4 @@ public class AccountNumberGenerator {
             return sb.toString();
         }
     }
-
-    public static boolean isValid(String number) {
-        if (!number.matches("\\d{2,10}")) {
-            return false;
-        }
-        String padded = String.format("%10s", number).replace(' ', '0');
-        int sum = 0;
-        for (int i = 0; i < 10; i++) {
-            sum += (padded.charAt(i) - '0') * WEIGHTS[i];
-        }
-
-        return sum % 11 == 0;
-    }
 }

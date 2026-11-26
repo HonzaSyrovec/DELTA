@@ -73,14 +73,4 @@ public class Transaction {
     public String getTargetAccountNumber() {
         return targetAccountNumber;
     }
-
-    @Override
-    public String toString() {
-        return type
-                + " | amount: " + amount + " " + currency
-                + " | fee: " + fee + " " + currency
-                + " | from: " + (sourceAccountNumber == null ? "-" : sourceAccountNumber)
-                + " | to: " + (targetAccountNumber == null ? "-" : targetAccountNumber)
-                + " | at: " + createdAt;
-    }
 }
