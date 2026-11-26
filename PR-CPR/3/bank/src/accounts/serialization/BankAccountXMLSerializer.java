@@ -7,11 +7,15 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.util.LinkedList;
 import java.util.List;
 
-public class BankAccountXMLSerializer implements BankAccountSerializer {
+public class BankAccountXmlSerializer implements BankAccountSerializer {
 
     XmlMapper xmlMapper = new XmlMapper();
 
-    BankAccountSerializeFactory bankAccountSerializeFactory = new BankAccountSerializeFactory();
+    BankAccountSerializeFactory bankAccountSerializeFactory;
+
+    public BankAccountXmlSerializer(BankAccountSerializeFactory bankAccountSerializeFactory) {
+        this.bankAccountSerializeFactory = bankAccountSerializeFactory;
+    }
 
     public String serializeAll(List<BankAccount> bankAccounts) {
         List<BankAccountSerialize> bankAccountSerialize = new LinkedList<>();

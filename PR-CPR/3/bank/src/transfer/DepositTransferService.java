@@ -39,11 +39,11 @@ public class DepositTransferService {
             newBalance += depositBonus;
         }
 
-        Transaction transaction = transactionFactory.createDeposit(bankAccount.getAccountNumber(), amount);
+        Transaction transaction = transactionFactory.createDeposit(bankAccount.getAccountNumber(), amount, bankAccount.getCurrency());
 
         bankAccount.setBalance(newBalance);
 
         transferLoggerService.log(transaction);
     }
 
-}
+}

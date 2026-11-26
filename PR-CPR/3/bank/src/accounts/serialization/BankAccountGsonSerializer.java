@@ -10,7 +10,11 @@ public class BankAccountGsonSerializer implements BankAccountSerializer {
 
     Gson gson = new Gson();
 
-    BankAccountSerializeFactory bankAccountSerializeFactory = new BankAccountSerializeFactory();
+    BankAccountSerializeFactory bankAccountSerializeFactory;
+
+    public BankAccountGsonSerializer(BankAccountSerializeFactory bankAccountSerializeFactory) {
+        this.bankAccountSerializeFactory = bankAccountSerializeFactory;
+    }
 
     public String serializeAll(List<BankAccount> bankAccounts) {
         List<BankAccountSerialize> bankAccountSerialize = new LinkedList<>();

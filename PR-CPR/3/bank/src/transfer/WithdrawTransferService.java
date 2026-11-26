@@ -45,7 +45,7 @@ public class WithdrawTransferService {
             throw new IllegalArgumentException("Not enough funds on account");
         }
 
-        Transaction transaction = transactionFactory.createWithdraw(account.getAccountNumber(), amount, serviceFee);
+        Transaction transaction = transactionFactory.createWithdraw(account.getAccountNumber(), amount, serviceFee, account.getCurrency());
 
         account.setBalance(newBalance);
 
@@ -60,4 +60,4 @@ public class WithdrawTransferService {
         return 0;
     }
 
-}
+}

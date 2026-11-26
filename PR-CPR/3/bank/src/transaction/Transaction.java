@@ -1,5 +1,7 @@
 package transaction;
 
+import currency.Currency;
+
 import java.time.LocalDateTime;
 
 public class Transaction {
@@ -14,6 +16,8 @@ public class Transaction {
 
     private final double fee;
 
+    private final Currency currency;
+
     private final String sourceAccountNumber;
 
     private final String targetAccountNumber;
@@ -24,6 +28,7 @@ public class Transaction {
             LocalDateTime createdAt,
             double amount,
             double fee,
+            Currency currency,
             String sourceAccountNumber,
             String targetAccountNumber
     ) {
@@ -32,6 +37,7 @@ public class Transaction {
         this.createdAt = createdAt;
         this.amount = amount;
         this.fee = fee;
+        this.currency = currency;
         this.sourceAccountNumber = sourceAccountNumber;
         this.targetAccountNumber = targetAccountNumber;
     }
@@ -56,6 +62,10 @@ public class Transaction {
         return fee;
     }
 
+    public Currency getCurrency() {
+        return currency;
+    }
+
     public String getSourceAccountNumber() {
         return sourceAccountNumber;
     }
@@ -67,8 +77,8 @@ public class Transaction {
     @Override
     public String toString() {
         return type
-                + " | amount: " + amount
-                + " | fee: " + fee
+                + " | amount: " + amount + " " + currency
+                + " | fee: " + fee + " " + currency
                 + " | from: " + (sourceAccountNumber == null ? "-" : sourceAccountNumber)
                 + " | to: " + (targetAccountNumber == null ? "-" : targetAccountNumber)
                 + " | at: " + createdAt;

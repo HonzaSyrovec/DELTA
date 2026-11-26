@@ -6,7 +6,11 @@ import java.util.List;
 
 public class BankAccountJsonSerializer implements BankAccountSerializer {
 
-    BankAccountSerializeFactory bankAccountSerializeFactory = new BankAccountSerializeFactory();
+    BankAccountSerializeFactory bankAccountSerializeFactory;
+
+    public BankAccountJsonSerializer(BankAccountSerializeFactory bankAccountSerializeFactory) {
+        this.bankAccountSerializeFactory = bankAccountSerializeFactory;
+    }
 
     public String serializeAll(List<BankAccount> bankAccounts) {
         StringBuilder builder = new StringBuilder();
@@ -36,6 +40,8 @@ public class BankAccountJsonSerializer implements BankAccountSerializer {
         builder.append("{");
         builder.append("\"accountNumber\": ");
         builder.append("\"" + bankAccountSerialize.accountNumber + "\"");
+        builder.append(", \"currency\": ");
+        builder.append("\"" + bankAccountSerialize.currency + "\"");
         builder.append("}");
 
         return builder.toString();

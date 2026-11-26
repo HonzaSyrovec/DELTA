@@ -2,6 +2,7 @@ package transfer;
 
 import accounts.BankAccount;
 import accounts.BusinessAccount;
+import currency.CurrencyConverter;
 import transaction.Transaction;
 import transaction.TransactionFactory;
 
@@ -13,13 +14,16 @@ public class TransferService {
 
     private final TransferLoggerService transferLoggerService;
 
-    public TransferService(TransactionFactory transactionFactory, TransferLoggerService transferLoggerService) {
-        if (transactionFactory == null || transferLoggerService == null) {
+    private final CurrencyConverter currencyConverter;
+
+    public TransferService(TransactionFactory transactionFactory, TransferLoggerService transferLoggerService, CurrencyConverter currencyConverter) {
+        if (transactionFactory == null || transferLoggerService == null || currencyConverter == null) {
             throw new IllegalArgumentException("Dependencies cannot be null");
         }
 
         this.transactionFactory = transactionFactory;
         this.transferLoggerService = transferLoggerService;
+        this.currencyConverter = currencyConverter;
     }
 
     public void transfer(BankAccount from, BankAccount to, double amount) {
@@ -42,11 +46,15 @@ public class TransferService {
                 from.getAccountNumber(),
                 to.getAccountNumber(),
                 amount,
-                transferFee
+                transferFee,
+                from.getCurrency()
         );
 
+        // castka je v mene zdrojoveho uctu, cilovemu uctu pripiseme prepocet
+        double receivedAmount = currencyConverter.convert(amount, from.getCurrency(), to.getCurrency());
+
         from.setBalance(from.getBalance() - totalAmount);
-        to.setBalance(to.getBalance() + amount);
+        to.setBalance(to.getBalance() + receivedAmount);
 
         transferLoggerService.log(transaction);
     }
@@ -64,4 +72,4 @@ public class TransferService {
             throw new IllegalArgumentException("Amount must be a positive number");
         }
     }
-}
+}

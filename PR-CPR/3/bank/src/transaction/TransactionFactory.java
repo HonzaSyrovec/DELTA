@@ -1,11 +1,13 @@
 package transaction;
 
+import currency.Currency;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class TransactionFactory {
 
-    public Transaction createDeposit(String targetAccountNumber, double amount) {
+    public Transaction createDeposit(String targetAccountNumber, double amount, Currency currency) {
         validateAccountNumber(targetAccountNumber);
         validateAmount(amount);
 
@@ -15,12 +17,13 @@ public class TransactionFactory {
                 LocalDateTime.now(),
                 amount,
                 0,
+                currency,
                 null,
                 targetAccountNumber
         );
     }
 
-    public Transaction createWithdraw(String sourceAccountNumber, double amount, double fee) {
+    public Transaction createWithdraw(String sourceAccountNumber, double amount, double fee, Currency currency) {
         validateAccountNumber(sourceAccountNumber);
         validateAmount(amount);
         validateFee(fee);
@@ -31,12 +34,13 @@ public class TransactionFactory {
                 LocalDateTime.now(),
                 amount,
                 fee,
+                currency,
                 sourceAccountNumber,
                 null
         );
     }
 
-    public Transaction createTransfer(String sourceAccountNumber, String targetAccountNumber, double amount, double fee) {
+    public Transaction createTransfer(String sourceAccountNumber, String targetAccountNumber, double amount, double fee, Currency currency) {
         validateAccountNumber(sourceAccountNumber);
         validateAccountNumber(targetAccountNumber);
         validateAmount(amount);
@@ -48,6 +52,7 @@ public class TransactionFactory {
                 LocalDateTime.now(),
                 amount,
                 fee,
+                currency,
                 sourceAccountNumber,
                 targetAccountNumber
         );
@@ -74,4 +79,4 @@ public class TransactionFactory {
             throw new IllegalArgumentException("Fee cannot be negative");
         }
     }
-}
+}

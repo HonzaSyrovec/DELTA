@@ -1,78 +1,52 @@
 package accounts.factories;
 
 import accounts.*;
-import generator.AccountNumberGenerator;
+import accounts.services.AccountNumberGenerator;
+import currency.Currency;
 import person.AccountOwner;
+
+import java.util.UUID;
 
 public class BankAccountFactory {
 
-    private final AccountNumberGenerator accountNumberGenerator;
+    AccountNumberGenerator accountNumberGenerator;
 
     public BankAccountFactory(AccountNumberGenerator accountNumberGenerator) {
-        if (accountNumberGenerator == null) {
-            throw new IllegalArgumentException("Account number generator cannot be null");
-        }
-
         this.accountNumberGenerator = accountNumberGenerator;
     }
 
-    public CurrentAccount createCurrentAccount(AccountOwner accountOwner) {
-        return createCurrentAccount(accountOwner, 0);
+    public BankAccount createCurrentBankAccount(AccountOwner accountOwner, double balance, Currency currency) {
+        BankAccount currentAccount = new CurrentAccount(accountOwner, balance);
+        this.initBankAccount(currentAccount, currency);
+
+        return currentAccount;
     }
 
-    public CurrentAccount createCurrentAccount(AccountOwner accountOwner, double balance) {
-        validate(accountOwner, balance);
+    public BankAccount createSavingBankAccount(AccountOwner accountOwner, double balance, Currency currency) {
+        BankAccount savingAccount = new SavingAccount(accountOwner, balance);
+        this.initBankAccount(savingAccount, currency);
 
-        return new CurrentAccount(accountOwner, accountNumberGenerator.generate(), balance);
+        return savingAccount;
     }
 
-    public SavingAccount createSavingAccount(AccountOwner accountOwner) {
-        return createSavingAccount(accountOwner, 0);
+    public BankAccount createStudentBankAccount(AccountOwner accountOwner, double balance, String school, Currency currency) {
+        BankAccount studentAccount = new StudentAccount(accountOwner, balance, school);
+        this.initBankAccount(studentAccount, currency);
+
+        return studentAccount;
     }
 
-    public SavingAccount createSavingAccount(AccountOwner accountOwner, double balance) {
-        validate(accountOwner, balance);
+    public BankAccount createBusinessBankAccount(AccountOwner accountOwner, double balance, Currency currency) {
+        BankAccount businessAccount = new BusinessAccount(accountOwner, balance);
+        this.initBankAccount(businessAccount, currency);
 
-        SavingAccount account = new SavingAccount(accountOwner, accountNumberGenerator.generate());
-        account.setBalance(balance);
-
-        return account;
+        return businessAccount;
     }
 
-    public StudentAccount createStudentAccount(AccountOwner accountOwner, String schoolName) {
-        return createStudentAccount(accountOwner, 0, schoolName);
+    private void initBankAccount(BankAccount bankAccount, Currency currency) {
+        bankAccount.setUuid(UUID.randomUUID().toString());
+        bankAccount.setAccountNumber(accountNumberGenerator.generate());
+        bankAccount.setCurrency(currency);
     }
 
-    public StudentAccount createStudentAccount(AccountOwner accountOwner, double balance, String schoolName) {
-        validate(accountOwner, balance);
-
-        if (schoolName == null || schoolName.isBlank()) {
-            throw new IllegalArgumentException("School name cannot be empty");
-        }
-
-        return new StudentAccount(accountOwner, accountNumberGenerator.generate(), balance, schoolName);
-    }
-
-    public BusinessAccount createBusinessAccount(AccountOwner accountOwner) {
-        return createBusinessAccount(accountOwner, 0);
-    }
-
-    public BusinessAccount createBusinessAccount(AccountOwner accountOwner, double balance) {
-        validate(accountOwner, balance);
-
-        BusinessAccount account = new BusinessAccount(accountOwner, accountNumberGenerator.generate());
-        account.setBalance(balance);
-
-        return account;
-    }
-
-    private void validate(AccountOwner accountOwner, double balance) {
-        if (accountOwner == null) {
-            throw new IllegalArgumentException("Account owner cannot be null");
-        }
-
-        if (Double.isNaN(balance) || Double.isInfinite(balance) || balance < 0) {
-            throw new IllegalArgumentException("Balance cannot be negative");
-        }
-    }
-}
+}

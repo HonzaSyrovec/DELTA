@@ -1,7 +1,6 @@
 package accounts;
 
-
-
+import currency.Currency;
 import notifier.ConsoleNotifierService;
 import notifier.EmailNotifierService;
 import notifier.NotifierService;
@@ -19,17 +18,17 @@ public abstract class BankAccount {
 
     private double balance;
 
+    private Currency currency = Currency.CZK;
+
     private NotifierService notifierService = new ConsoleNotifierService();
 
-    public BankAccount(AccountOwner accountOwner, String accountNumber) {
-        this.uuid = UUID.randomUUID().toString();
+    public BankAccount(AccountOwner accountOwner) {
         this.accountOwner = accountOwner;
-        this.accountNumber = accountNumber;
         this.balance = 0;
     }
 
-    public BankAccount(AccountOwner accountOwner, String accountNumber, double balance) {
-        this(accountOwner, accountNumber);
+    public BankAccount(AccountOwner accountOwner, double balance) {
+        this(accountOwner);
 
         this.balance = balance;
     }
@@ -42,7 +41,23 @@ public abstract class BankAccount {
         this.balance = balance;
     }
 
+    public Currency getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(Currency currency) {
+        this.currency = currency;
+    }
+
     public String getAccountNumber() {
         return accountNumber;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 }

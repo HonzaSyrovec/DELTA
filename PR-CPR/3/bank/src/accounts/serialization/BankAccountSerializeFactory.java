@@ -8,6 +8,7 @@ public class BankAccountSerializeFactory {
         BankAccountSerialize bankAccountSerialize = new BankAccountSerialize();
 
         bankAccountSerialize.accountNumber = bankAccount.getAccountNumber();
+        bankAccountSerialize.currency = bankAccount.getCurrency().name();
 
         return bankAccountSerialize;
     }
